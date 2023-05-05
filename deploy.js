@@ -18,7 +18,7 @@ contract.deploy({
 }).send({
     from: account.address,
     gas: 3000000,
-    gasPrice: '30000000000'
+    gasPrice: '10000000000'
 }).then((newContractInstance) => {
     console.log('Contract deployed at address: ' + newContractInstance.options.address);
 });

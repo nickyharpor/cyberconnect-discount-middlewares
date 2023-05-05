@@ -24,7 +24,17 @@ directory. Next, follow the
 [deployment](https://github.com/cyberconnecthq/cybercontracts/tree/main#deployment)
 guide to compile and deploy.
 
-## Essence Middlewares:
+## Demo (BNB Testnet):
+
+| Middleware | Address |
+| --- | --- |
+| Early Bird | [0x998A7331529EDe43fdB3CabA7f85F265eE63B636](https://testnet.bscscan.com/address/0x998A7331529EDe43fdB3CabA7f85F265eE63B636) |
+| First N | [0x8B08012f7fab8FaDD7c3c6d686ABA3e73Cf9262D](https://testnet.bscscan.com/address/0x8b08012f7fab8fadd7c3c6d686aba3e73cf9262d) |
+| Hot Essence | [0x09bccAF5769A44DfbA3BD7610d693f604764f9Cf](https://testnet.bscscan.com/address/0x09bccAF5769A44DfbA3BD7610d693f604764f9Cf) |
+| Upgrade | [0x36f797cf56a9b772470658eb02F25507081e7bF9](https://testnet.bscscan.com/address/0x36f797cf56a9b772470658eb02F25507081e7bF9) |
+
+
+## Middlewares:
 
 ### [CollectEarlyBirdMw.sol](CollectEarlyBirdMw.sol)
 
