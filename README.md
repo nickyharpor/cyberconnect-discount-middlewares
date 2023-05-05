@@ -7,6 +7,23 @@ ways.
 [CollectPaidMw.sol](https://github.com/cyberconnecthq/cybercontracts/blob/main/src/middlewares/essence/CollectPaidMw.sol)
 is used as the base for writing these new middlewares.
 
+## Usage:
+
+### Option 1:
+The [interfaces](abi) and [bytecodes](bin) of all the 
+contracts are available. You can use them to deploy 
+your own contract using [deploy.js](deploy.js).
+
+### Option 2:
+To compile and deploy the contracts you can clone the
+original
+[cybercontracts](https://github.com/cyberconnecthq/cybercontracts/tree/main)
+repo, and copy your desired `.sol` file under
+[essence](https://github.com/cyberconnecthq/cybercontracts/tree/main/src/middlewares/essence)
+directory. Next, follow the
+[deployment](https://github.com/cyberconnecthq/cybercontracts/tree/main#deployment)
+guide to compile and deploy.
+
 ## Essence Middlewares:
 
 ### [CollectEarlyBirdMw.sol](CollectEarlyBirdMw.sol)
@@ -93,20 +110,3 @@ a discount.
 `uint256 upgradeDiscount` sets discount percentage. Must be less
 than or equal to `Constants._MAX_BPS`. Zero means no
 discount.
-
----
-
-## Usage:
-To compile and deploy the contracts you can clone the
-original
-[cybercontracts](https://github.com/cyberconnecthq/cybercontracts/tree/main)
-repo, and copy your desired `.sol` file under
-[essence](https://github.com/cyberconnecthq/cybercontracts/tree/main/src/middlewares/essence)
-directory.
-
-Next, follow the
-[deployment](https://github.com/cyberconnecthq/cybercontracts/tree/main#deployment)
-guide to compile and deploy. You can skip the compilation
-by using any of the compiled [abi](abi), [evm](evm),
-and [bin](bin) files for all the middlewares and their
-dependencies (available here in this repo).

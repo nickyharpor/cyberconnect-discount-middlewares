@@ -1,0 +1,27 @@
+{
+  "name": "cyberconnect-discount-middlewares",
+  "version": "1.0.0",
+  "description": "cyberconnect discount middleware collection",
+  "main": "deploy.js",
+  "scripts": {
+    "test": "node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickyharpor/cyberconnect-discount-middlewares.git"
+  },
+  "keywords": [
+    "cyberconnect",
+    "solidity"
+  ],
+  "author": "Nicky Harpor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickyharpor/cyberconnect-discount-middlewares/issues"
+  },
+  "homepage": "https://github.com/nickyharpor/cyberconnect-discount-middlewares#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "web3": "^1.9.0"
+  }
+}
