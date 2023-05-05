@@ -1,0 +1,4789 @@
+    /* "src/dependencies/solmate/RolesAuthority.sol":593:4204  contract RolesAuthority is Initializable, Auth, Authority {... */
+  mstore(0x40, 0x80)
+    /* "src/dependencies/solmate/RolesAuthority.sol":1324:1439  constructor(address _owner, Authority _authority) initializer {... */
+  callvalue
+  dup1
+  iszero
+  tag_1
+  jumpi
+  0x00
+  dup1
+  revert
+tag_1:
+  pop
+  mload(0x40)
+  sub(codesize, bytecodeSize)
+  dup1
+  bytecodeSize
+  dup4
+  codecopy
+  dup2
+  dup2
+  add
+  0x40
+  mstore
+  dup2
+  add
+  swap1
+  tag_2
+  swap2
+  swap1
+  tag_3
+  jump	// in
+tag_2:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3257:3276  bool isTopLevelCall */
+  0x00
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3280:3293  _initializing */
+  dup1
+  0x01
+  swap1
+  sload
+  swap1
+  0x0100
+  exp
+  swap1
+  div
+  0xff
+  and
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3279:3293  !_initializing */
+  iszero
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3257:3293  bool isTopLevelCall = !_initializing */
+  swap1
+  pop
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3325:3339  isTopLevelCall */
+  dup1
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3325:3359  isTopLevelCall && _initialized < 1 */
+  dup1
+  iszero
+  tag_6
+  jumpi
+  pop
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3358:3359  1 */
+  0x01
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3343:3355  _initialized */
+  0x00
+  dup1
+  sload
+  swap1
+  0x0100
+  exp
+  swap1
+  div
+  0xff
+  and
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3343:3359  _initialized < 1 */
+  0xff
+  and
+  lt
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3325:3359  isTopLevelCall && _initialized < 1 */
+tag_6:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3324:3421  (isTopLevelCall && _initialized < 1) || (!Address.isContract(address(this)) && _initialized == 1) */
+  dup1
+  tag_7
+  jumpi
+  pop
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3366:3399  Address.isContract(address(this)) */
+  tag_8
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3393:3397  this */
+  address
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3366:3384  Address.isContract */
+  or(tag_0_76, shl(0x20, tag_9))
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3366:3399  Address.isContract(address(this)) */
+  0x20
+  shr
+  jump	// in
+tag_8:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3365:3399  !Address.isContract(address(this)) */
+  iszero
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3365:3420  !Address.isContract(address(this)) && _initialized == 1 */
+  dup1
+  iszero
+  tag_10
+  jumpi
+  pop
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3419:3420  1 */
+  0x01
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3403:3415  _initialized */
+  0x00
+  dup1
+  sload
+  swap1
+  0x0100
+  exp
+  swap1
+  div
+  0xff
+  and
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3403:3420  _initialized == 1 */
+  0xff
+  and
+  eq
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3365:3420  !Address.isContract(address(this)) && _initialized == 1 */
+tag_10:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3324:3421  (isTopLevelCall && _initialized < 1) || (!Address.isContract(address(this)) && _initialized == 1) */
+tag_7:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3303:3493  require(... */
+  tag_11
+  jumpi
+  mload(0x40)
+  0x08c379a000000000000000000000000000000000000000000000000000000000
+  dup2
+  mstore
+  0x04
+  add
+  tag_12
+  swap1
+  tag_13
+  jump	// in
+tag_12:
+  mload(0x40)
+  dup1
+  swap2
+  sub
+  swap1
+  revert
+tag_11:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3518:3519  1 */
+  0x01
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3503:3515  _initialized */
+  0x00
+  dup1
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3503:3519  _initialized = 1 */
+  0x0100
+  exp
+  dup2
+  sload
+  dup2
+  0xff
+  mul
+  not
+  and
+  swap1
+  dup4
+  0xff
+  and
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3533:3547  isTopLevelCall */
+  dup1
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3529:3594  if (isTopLevelCall) {... */
+  iszero
+  tag_14
+  jumpi
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3579:3583  true */
+  0x01
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3563:3576  _initializing */
+  0x00
+  0x01
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3563:3583  _initializing = true */
+  0x0100
+  exp
+  dup2
+  sload
+  dup2
+  0xff
+  mul
+  not
+  and
+  swap1
+  dup4
+  iszero
+  iszero
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3529:3594  if (isTopLevelCall) {... */
+tag_14:
+    /* "src/dependencies/solmate/RolesAuthority.sol":1396:1432  Auth.__Auth_Init(_owner, _authority) */
+  tag_16
+    /* "src/dependencies/solmate/RolesAuthority.sol":1413:1419  _owner */
+  dup4
+    /* "src/dependencies/solmate/RolesAuthority.sol":1421:1431  _authority */
+  dup4
+    /* "src/dependencies/solmate/RolesAuthority.sol":1396:1412  Auth.__Auth_Init */
+  or(tag_0_77, shl(0x20, tag_17))
+    /* "src/dependencies/solmate/RolesAuthority.sol":1396:1432  Auth.__Auth_Init(_owner, _authority) */
+  0x20
+  shr
+  jump	// in
+tag_16:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3618:3632  isTopLevelCall */
+  dup1
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3614:3713  if (isTopLevelCall) {... */
+  iszero
+  tag_18
+  jumpi
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3664:3669  false */
+  0x00
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3648:3661  _initializing */
+  dup1
+  0x01
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3648:3669  _initializing = false */
+  0x0100
+  exp
+  dup2
+  sload
+  dup2
+  0xff
+  mul
+  not
+  and
+  swap1
+  dup4
+  iszero
+  iszero
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3688:3702  Initialized(1) */
+  0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3700:3701  1 */
+  0x01
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3688:3702  Initialized(1) */
+  mload(0x40)
+  tag_19
+  swap2
+  swap1
+  tag_20
+  jump	// in
+tag_19:
+  mload(0x40)
+  dup1
+  swap2
+  sub
+  swap1
+  log1
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3614:3713  if (isTopLevelCall) {... */
+tag_18:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":3247:3719  {... */
+  pop
+    /* "src/dependencies/solmate/RolesAuthority.sol":1324:1439  constructor(address _owner, Authority _authority) initializer {... */
+  pop
+  pop
+    /* "src/dependencies/solmate/RolesAuthority.sol":593:4204  contract RolesAuthority is Initializable, Auth, Authority {... */
+  jump(tag_21)
+    /* "openzeppelin-contracts/contracts/utils/Address.sol":1175:1495  function isContract(address account) internal view returns (bool) {... */
+tag_9:
+    /* "openzeppelin-contracts/contracts/utils/Address.sol":1235:1239  bool */
+  0x00
+    /* "openzeppelin-contracts/contracts/utils/Address.sol":1487:1488  0 */
+  dup1
+    /* "openzeppelin-contracts/contracts/utils/Address.sol":1465:1472  account */
+  dup3
+    /* "openzeppelin-contracts/contracts/utils/Address.sol":1465:1484  account.code.length */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  extcodesize
+    /* "openzeppelin-contracts/contracts/utils/Address.sol":1465:1488  account.code.length > 0 */
+  gt
+    /* "openzeppelin-contracts/contracts/utils/Address.sol":1458:1488  return account.code.length > 0 */
+  swap1
+  pop
+    /* "openzeppelin-contracts/contracts/utils/Address.sol":1175:1495  function isContract(address account) internal view returns (bool) {... */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "src/dependencies/solmate/Auth.sol":818:1069  function __Auth_Init(address _owner, Authority _authority) internal onlyInitializing {... */
+tag_17:
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":5341:5354  _initializing */
+  0x00
+  0x01
+  swap1
+  sload
+  swap1
+  0x0100
+  exp
+  swap1
+  div
+  0xff
+  and
+    /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":5333:5402  require(_initializing, "Initializable: contract is not initializing") */
+  tag_24
+  jumpi
+  mload(0x40)
+  0x08c379a000000000000000000000000000000000000000000000000000000000
+  dup2
+  mstore
+  0x04
+  add
+  tag_25
+  swap1
+  tag_26
+  jump	// in
+tag_25:
+  mload(0x40)
+  dup1
+  swap2
+  sub
+  swap1
+  revert
+tag_24:
+    /* "src/dependencies/solmate/Auth.sol":921:927  _owner */
+  dup2
+    /* "src/dependencies/solmate/Auth.sol":913:918  owner */
+  0x00
+  0x02
+    /* "src/dependencies/solmate/Auth.sol":913:927  owner = _owner */
+  0x0100
+  exp
+  dup2
+  sload
+  dup2
+  0xffffffffffffffffffffffffffffffffffffffff
+  mul
+  not
+  and
+  swap1
+  dup4
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "src/dependencies/solmate/Auth.sol":949:959  _authority */
+  dup1
+    /* "src/dependencies/solmate/Auth.sol":937:946  authority */
+  0x01
+  0x00
+    /* "src/dependencies/solmate/Auth.sol":937:959  authority = _authority */
+  0x0100
+  exp
+  dup2
+  sload
+  dup2
+  0xffffffffffffffffffffffffffffffffffffffff
+  mul
+  not
+  and
+  swap1
+  dup4
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "src/dependencies/solmate/Auth.sol":1000:1006  _owner */
+  dup2
+    /* "src/dependencies/solmate/Auth.sol":975:1007  OwnerUpdated(msg.sender, _owner) */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+    /* "src/dependencies/solmate/Auth.sol":988:998  msg.sender */
+  caller
+    /* "src/dependencies/solmate/Auth.sol":975:1007  OwnerUpdated(msg.sender, _owner) */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  0x8292fce18fa69edf4db7b94ea2e58241df0ae57f97e0a6c9b29067028bf92d76
+  mload(0x40)
+  mload(0x40)
+  dup1
+  swap2
+  sub
+  swap1
+  log3
+    /* "src/dependencies/solmate/Auth.sol":1051:1061  _authority */
+  dup1
+    /* "src/dependencies/solmate/Auth.sol":1022:1062  AuthorityUpdated(msg.sender, _authority) */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+    /* "src/dependencies/solmate/Auth.sol":1039:1049  msg.sender */
+  caller
+    /* "src/dependencies/solmate/Auth.sol":1022:1062  AuthorityUpdated(msg.sender, _authority) */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  0xa3396fd7f6e0a21b50e5089d2da70d5ac0a3bbbd1f617a93f134b76389980198
+  mload(0x40)
+  mload(0x40)
+  dup1
+  swap2
+  sub
+  swap1
+  log3
+    /* "src/dependencies/solmate/Auth.sol":818:1069  function __Auth_Init(address _owner, Authority _authority) internal onlyInitializing {... */
+  pop
+  pop
+  jump	// out
+    /* "#utility.yul":88:205   */
+tag_29:
+    /* "#utility.yul":197:198   */
+  0x00
+    /* "#utility.yul":194:195   */
+  dup1
+    /* "#utility.yul":187:199   */
+  revert
+    /* "#utility.yul":334:460   */
+tag_31:
+    /* "#utility.yul":371:378   */
+  0x00
+    /* "#utility.yul":411:453   */
+  0xffffffffffffffffffffffffffffffffffffffff
+    /* "#utility.yul":404:409   */
+  dup3
+    /* "#utility.yul":400:454   */
+  and
+    /* "#utility.yul":389:454   */
+  swap1
+  pop
+    /* "#utility.yul":334:460   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":466:562   */
+tag_32:
+    /* "#utility.yul":503:510   */
+  0x00
+    /* "#utility.yul":532:556   */
+  tag_54
+    /* "#utility.yul":550:555   */
+  dup3
+    /* "#utility.yul":532:556   */
+  tag_31
+  jump	// in
+tag_54:
+    /* "#utility.yul":521:556   */
+  swap1
+  pop
+    /* "#utility.yul":466:562   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":568:690   */
+tag_33:
+    /* "#utility.yul":641:665   */
+  tag_56
+    /* "#utility.yul":659:664   */
+  dup2
+    /* "#utility.yul":641:665   */
+  tag_32
+  jump	// in
+tag_56:
+    /* "#utility.yul":634:639   */
+  dup2
+    /* "#utility.yul":631:666   */
+  eq
+    /* "#utility.yul":621:684   */
+  tag_57
+  jumpi
+    /* "#utility.yul":680:681   */
+  0x00
+    /* "#utility.yul":677:678   */
+  dup1
+    /* "#utility.yul":670:682   */
+  revert
+    /* "#utility.yul":621:684   */
+tag_57:
+    /* "#utility.yul":568:690   */
+  pop
+  jump	// out
+    /* "#utility.yul":696:839   */
+tag_34:
+    /* "#utility.yul":753:758   */
+  0x00
+    /* "#utility.yul":784:790   */
+  dup2
+    /* "#utility.yul":778:791   */
+  mload
+    /* "#utility.yul":769:791   */
+  swap1
+  pop
+    /* "#utility.yul":800:833   */
+  tag_59
+    /* "#utility.yul":827:832   */
+  dup2
+    /* "#utility.yul":800:833   */
+  tag_33
+  jump	// in
+tag_59:
+    /* "#utility.yul":696:839   */
+  swap3
+  swap2
+  pop
+  pop
+  jump	// out
+    /* "#utility.yul":845:959   */
+tag_35:
+    /* "#utility.yul":900:907   */
+  0x00
+    /* "#utility.yul":929:953   */
+  tag_61
+    /* "#utility.yul":947:952   */
+  dup3
+    /* "#utility.yul":929:953   */
+  tag_32
+  jump	// in
+tag_61:
+    /* "#utility.yul":918:953   */
+  swap1
+  pop
+    /* "#utility.yul":845:959   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":965:1123   */
+tag_36:
+    /* "#utility.yul":1056:1098   */
+  tag_63
+    /* "#utility.yul":1092:1097   */
+  dup2
+    /* "#utility.yul":1056:1098   */
+  tag_35
+  jump	// in
+tag_63:
+    /* "#utility.yul":1049:1054   */
+  dup2
+    /* "#utility.yul":1046:1099   */
+  eq
+    /* "#utility.yul":1036:1117   */
+  tag_64
+  jumpi
+    /* "#utility.yul":1113:1114   */
+  0x00
+    /* "#utility.yul":1110:1111   */
+  dup1
+    /* "#utility.yul":1103:1115   */
+  revert
+    /* "#utility.yul":1036:1117   */
+tag_64:
+    /* "#utility.yul":965:1123   */
+  pop
+  jump	// out
+    /* "#utility.yul":1129:1308   */
+tag_37:
+    /* "#utility.yul":1204:1209   */
+  0x00
+    /* "#utility.yul":1235:1241   */
+  dup2
+    /* "#utility.yul":1229:1242   */
+  mload
+    /* "#utility.yul":1220:1242   */
+  swap1
+  pop
+    /* "#utility.yul":1251:1302   */
+  tag_66
+    /* "#utility.yul":1296:1301   */
+  dup2
+    /* "#utility.yul":1251:1302   */
+  tag_36
+  jump	// in
+tag_66:
+    /* "#utility.yul":1129:1308   */
+  swap3
+  swap2
+  pop
+  pop
+  jump	// out
+    /* "#utility.yul":1314:1857   */
+tag_3:
+    /* "#utility.yul":1411:1417   */
+  0x00
+    /* "#utility.yul":1419:1425   */
+  dup1
+    /* "#utility.yul":1468:1470   */
+  0x40
+    /* "#utility.yul":1456:1465   */
+  dup4
+    /* "#utility.yul":1447:1454   */
+  dup6
+    /* "#utility.yul":1443:1466   */
+  sub
+    /* "#utility.yul":1439:1471   */
+  slt
+    /* "#utility.yul":1436:1555   */
+  iszero
+  tag_68
+  jumpi
+    /* "#utility.yul":1474:1553   */
+  tag_69
+  tag_29
+  jump	// in
+tag_69:
+    /* "#utility.yul":1436:1555   */
+tag_68:
+    /* "#utility.yul":1594:1595   */
+  0x00
+    /* "#utility.yul":1619:1683   */
+  tag_70
+    /* "#utility.yul":1675:1682   */
+  dup6
+    /* "#utility.yul":1666:1672   */
+  dup3
+    /* "#utility.yul":1655:1664   */
+  dup7
+    /* "#utility.yul":1651:1673   */
+  add
+    /* "#utility.yul":1619:1683   */
+  tag_34
+  jump	// in
+tag_70:
+    /* "#utility.yul":1609:1683   */
+  swap3
+  pop
+    /* "#utility.yul":1565:1693   */
+  pop
+    /* "#utility.yul":1732:1734   */
+  0x20
+    /* "#utility.yul":1758:1840   */
+  tag_71
+    /* "#utility.yul":1832:1839   */
+  dup6
+    /* "#utility.yul":1823:1829   */
+  dup3
+    /* "#utility.yul":1812:1821   */
+  dup7
+    /* "#utility.yul":1808:1830   */
+  add
+    /* "#utility.yul":1758:1840   */
+  tag_37
+  jump	// in
+tag_71:
+    /* "#utility.yul":1748:1840   */
+  swap2
+  pop
+    /* "#utility.yul":1703:1850   */
+  pop
+    /* "#utility.yul":1314:1857   */
+  swap3
+  pop
+  swap3
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":1863:2032   */
+tag_38:
+    /* "#utility.yul":1947:1958   */
+  0x00
+    /* "#utility.yul":1981:1987   */
+  dup3
+    /* "#utility.yul":1976:1979   */
+  dup3
+    /* "#utility.yul":1969:1988   */
+  mstore
+    /* "#utility.yul":2021:2025   */
+  0x20
+    /* "#utility.yul":2016:2019   */
+  dup3
+    /* "#utility.yul":2012:2026   */
+  add
+    /* "#utility.yul":1997:2026   */
+  swap1
+  pop
+    /* "#utility.yul":1863:2032   */
+  swap3
+  swap2
+  pop
+  pop
+  jump	// out
+    /* "#utility.yul":2038:2271   */
+tag_39:
+    /* "#utility.yul":2178:2212   */
+  0x496e697469616c697a61626c653a20636f6e747261637420697320616c726561
+    /* "#utility.yul":2174:2175   */
+  0x00
+    /* "#utility.yul":2166:2172   */
+  dup3
+    /* "#utility.yul":2162:2176   */
+  add
+    /* "#utility.yul":2155:2213   */
+  mstore
+    /* "#utility.yul":2247:2263   */
+  0x647920696e697469616c697a6564000000000000000000000000000000000000
+    /* "#utility.yul":2242:2244   */
+  0x20
+    /* "#utility.yul":2234:2240   */
+  dup3
+    /* "#utility.yul":2230:2245   */
+  add
+    /* "#utility.yul":2223:2264   */
+  mstore
+    /* "#utility.yul":2038:2271   */
+  pop
+  jump	// out
+    /* "#utility.yul":2277:2643   */
+tag_40:
+    /* "#utility.yul":2419:2422   */
+  0x00
+    /* "#utility.yul":2440:2507   */
+  tag_75
+    /* "#utility.yul":2504:2506   */
+  0x2e
+    /* "#utility.yul":2499:2502   */
+  dup4
+    /* "#utility.yul":2440:2507   */
+  tag_38
+  jump	// in
+tag_75:
+    /* "#utility.yul":2433:2507   */
+  swap2
+  pop
+    /* "#utility.yul":2516:2609   */
+  tag_76
+    /* "#utility.yul":2605:2608   */
+  dup3
+    /* "#utility.yul":2516:2609   */
+  tag_39
+  jump	// in
+tag_76:
+    /* "#utility.yul":2634:2636   */
+  0x40
+    /* "#utility.yul":2629:2632   */
+  dup3
+    /* "#utility.yul":2625:2637   */
+  add
+    /* "#utility.yul":2618:2637   */
+  swap1
+  pop
+    /* "#utility.yul":2277:2643   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":2649:3068   */
+tag_13:
+    /* "#utility.yul":2815:2819   */
+  0x00
+    /* "#utility.yul":2853:2855   */
+  0x20
+    /* "#utility.yul":2842:2851   */
+  dup3
+    /* "#utility.yul":2838:2856   */
+  add
+    /* "#utility.yul":2830:2856   */
+  swap1
+  pop
+    /* "#utility.yul":2902:2911   */
+  dup2
+    /* "#utility.yul":2896:2900   */
+  dup2
+    /* "#utility.yul":2892:2912   */
+  sub
+    /* "#utility.yul":2888:2889   */
+  0x00
+    /* "#utility.yul":2877:2886   */
+  dup4
+    /* "#utility.yul":2873:2890   */
+  add
+    /* "#utility.yul":2866:2913   */
+  mstore
+    /* "#utility.yul":2930:3061   */
+  tag_78
+    /* "#utility.yul":3056:3060   */
+  dup2
+    /* "#utility.yul":2930:3061   */
+  tag_40
+  jump	// in
+tag_78:
+    /* "#utility.yul":2922:3061   */
+  swap1
+  pop
+    /* "#utility.yul":2649:3068   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":3074:3159   */
+tag_41:
+    /* "#utility.yul":3119:3126   */
+  0x00
+    /* "#utility.yul":3148:3153   */
+  dup2
+    /* "#utility.yul":3137:3153   */
+  swap1
+  pop
+    /* "#utility.yul":3074:3159   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":3165:3251   */
+tag_42:
+    /* "#utility.yul":3200:3207   */
+  0x00
+    /* "#utility.yul":3240:3244   */
+  0xff
+    /* "#utility.yul":3233:3238   */
+  dup3
+    /* "#utility.yul":3229:3245   */
+  and
+    /* "#utility.yul":3218:3245   */
+  swap1
+  pop
+    /* "#utility.yul":3165:3251   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":3257:3317   */
+tag_43:
+    /* "#utility.yul":3285:3288   */
+  0x00
+    /* "#utility.yul":3306:3311   */
+  dup2
+    /* "#utility.yul":3299:3311   */
+  swap1
+  pop
+    /* "#utility.yul":3257:3317   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":3323:3477   */
+tag_44:
+    /* "#utility.yul":3379:3388   */
+  0x00
+    /* "#utility.yul":3412:3471   */
+  tag_83
+    /* "#utility.yul":3428:3470   */
+  tag_84
+    /* "#utility.yul":3437:3469   */
+  tag_85
+    /* "#utility.yul":3463:3468   */
+  dup5
+    /* "#utility.yul":3437:3469   */
+  tag_41
+  jump	// in
+tag_85:
+    /* "#utility.yul":3428:3470   */
+  tag_43
+  jump	// in
+tag_84:
+    /* "#utility.yul":3412:3471   */
+  tag_42
+  jump	// in
+tag_83:
+    /* "#utility.yul":3399:3471   */
+  swap1
+  pop
+    /* "#utility.yul":3323:3477   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":3483:3626   */
+tag_45:
+    /* "#utility.yul":3576:3619   */
+  tag_87
+    /* "#utility.yul":3613:3618   */
+  dup2
+    /* "#utility.yul":3576:3619   */
+  tag_44
+  jump	// in
+tag_87:
+    /* "#utility.yul":3571:3574   */
+  dup3
+    /* "#utility.yul":3564:3620   */
+  mstore
+    /* "#utility.yul":3483:3626   */
+  pop
+  pop
+  jump	// out
+    /* "#utility.yul":3632:3866   */
+tag_20:
+    /* "#utility.yul":3731:3735   */
+  0x00
+    /* "#utility.yul":3769:3771   */
+  0x20
+    /* "#utility.yul":3758:3767   */
+  dup3
+    /* "#utility.yul":3754:3772   */
+  add
+    /* "#utility.yul":3746:3772   */
+  swap1
+  pop
+    /* "#utility.yul":3782:3859   */
+  tag_89
+    /* "#utility.yul":3856:3857   */
+  0x00
+    /* "#utility.yul":3845:3854   */
+  dup4
+    /* "#utility.yul":3841:3858   */
+  add
+    /* "#utility.yul":3832:3838   */
+  dup5
+    /* "#utility.yul":3782:3859   */
+  tag_45
+  jump	// in
+tag_89:
+    /* "#utility.yul":3632:3866   */
+  swap3
+  swap2
+  pop
+  pop
+  jump	// out
+    /* "#utility.yul":3872:4102   */
+tag_46:
+    /* "#utility.yul":4012:4046   */
+  0x496e697469616c697a61626c653a20636f6e7472616374206973206e6f742069
+    /* "#utility.yul":4008:4009   */
+  0x00
+    /* "#utility.yul":4000:4006   */
+  dup3
+    /* "#utility.yul":3996:4010   */
+  add
+    /* "#utility.yul":3989:4047   */
+  mstore
+    /* "#utility.yul":4081:4094   */
+  0x6e697469616c697a696e67000000000000000000000000000000000000000000
+    /* "#utility.yul":4076:4078   */
+  0x20
+    /* "#utility.yul":4068:4074   */
+  dup3
+    /* "#utility.yul":4064:4079   */
+  add
+    /* "#utility.yul":4057:4095   */
+  mstore
+    /* "#utility.yul":3872:4102   */
+  pop
+  jump	// out
+    /* "#utility.yul":4108:4474   */
+tag_47:
+    /* "#utility.yul":4250:4253   */
+  0x00
+    /* "#utility.yul":4271:4338   */
+  tag_92
+    /* "#utility.yul":4335:4337   */
+  0x2b
+    /* "#utility.yul":4330:4333   */
+  dup4
+    /* "#utility.yul":4271:4338   */
+  tag_38
+  jump	// in
+tag_92:
+    /* "#utility.yul":4264:4338   */
+  swap2
+  pop
+    /* "#utility.yul":4347:4440   */
+  tag_93
+    /* "#utility.yul":4436:4439   */
+  dup3
+    /* "#utility.yul":4347:4440   */
+  tag_46
+  jump	// in
+tag_93:
+    /* "#utility.yul":4465:4467   */
+  0x40
+    /* "#utility.yul":4460:4463   */
+  dup3
+    /* "#utility.yul":4456:4468   */
+  add
+    /* "#utility.yul":4449:4468   */
+  swap1
+  pop
+    /* "#utility.yul":4108:4474   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "#utility.yul":4480:4899   */
+tag_26:
+    /* "#utility.yul":4646:4650   */
+  0x00
+    /* "#utility.yul":4684:4686   */
+  0x20
+    /* "#utility.yul":4673:4682   */
+  dup3
+    /* "#utility.yul":4669:4687   */
+  add
+    /* "#utility.yul":4661:4687   */
+  swap1
+  pop
+    /* "#utility.yul":4733:4742   */
+  dup2
+    /* "#utility.yul":4727:4731   */
+  dup2
+    /* "#utility.yul":4723:4743   */
+  sub
+    /* "#utility.yul":4719:4720   */
+  0x00
+    /* "#utility.yul":4708:4717   */
+  dup4
+    /* "#utility.yul":4704:4721   */
+  add
+    /* "#utility.yul":4697:4744   */
+  mstore
+    /* "#utility.yul":4761:4892   */
+  tag_95
+    /* "#utility.yul":4887:4891   */
+  dup2
+    /* "#utility.yul":4761:4892   */
+  tag_47
+  jump	// in
+tag_95:
+    /* "#utility.yul":4753:4892   */
+  swap1
+  pop
+    /* "#utility.yul":4480:4899   */
+  swap2
+  swap1
+  pop
+  jump	// out
+    /* "src/dependencies/solmate/RolesAuthority.sol":593:4204  contract RolesAuthority is Initializable, Auth, Authority {... */
+tag_21:
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x00
+  codecopy
+  0x00
+  return
+stop
+
+sub_0: assembly {
+        /* "src/dependencies/solmate/RolesAuthority.sol":593:4204  contract RolesAuthority is Initializable, Auth, Authority {... */
+      mstore(0x40, 0x80)
+      callvalue
+      dup1
+      iszero
+      tag_1
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_1:
+      pop
+      jumpi(tag_2, lt(calldatasize, 0x04))
+      shr(0xe0, calldataload(0x00))
+      dup1
+      0x7d40583d
+      gt
+      tag_16
+      jumpi
+      dup1
+      0xb7009613
+      gt
+      tag_17
+      jumpi
+      dup1
+      0xb7009613
+      eq
+      tag_12
+      jumpi
+      dup1
+      0xbf7e214f
+      eq
+      tag_13
+      jumpi
+      dup1
+      0xc6b0263e
+      eq
+      tag_14
+      jumpi
+      dup1
+      0xea7ca276
+      eq
+      tag_15
+      jumpi
+      jump(tag_2)
+    tag_17:
+      dup1
+      0x7d40583d
+      eq
+      tag_9
+      jumpi
+      dup1
+      0x8da5cb5b
+      eq
+      tag_10
+      jumpi
+      dup1
+      0xb4bad06a
+      eq
+      tag_11
+      jumpi
+      jump(tag_2)
+    tag_16:
+      dup1
+      0x06a36aee
+      eq
+      tag_3
+      jumpi
+      dup1
+      0x13af4035
+      eq
+      tag_4
+      jumpi
+      dup1
+      0x2f47571f
+      eq
+      tag_5
+      jumpi
+      dup1
+      0x67aff484
+      eq
+      tag_6
+      jumpi
+      dup1
+      0x7917b794
+      eq
+      tag_7
+      jumpi
+      dup1
+      0x7a9e5e4b
+      eq
+      tag_8
+      jumpi
+    tag_2:
+      0x00
+      dup1
+      revert
+        /* "src/dependencies/solmate/RolesAuthority.sol":1630:1677  mapping(address => bytes32) public getUserRoles */
+    tag_3:
+      tag_18
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_19
+      swap2
+      swap1
+      tag_20
+      jump	// in
+    tag_19:
+      tag_21
+      jump	// in
+    tag_18:
+      mload(0x40)
+      tag_22
+      swap2
+      swap1
+      tag_23
+      jump	// in
+    tag_22:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "src/dependencies/solmate/Auth.sol":2202:2349  function setOwner(address newOwner) public virtual requiresAuth {... */
+    tag_4:
+      tag_24
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_25
+      swap2
+      swap1
+      tag_20
+      jump	// in
+    tag_25:
+      tag_26
+      jump	// in
+    tag_24:
+      stop
+        /* "src/dependencies/solmate/RolesAuthority.sol":1684:1753  mapping(address => mapping(bytes4 => bool)) public isCapabilityPublic */
+    tag_5:
+      tag_27
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_28
+      swap2
+      swap1
+      tag_29
+      jump	// in
+    tag_28:
+      tag_30
+      jump	// in
+    tag_27:
+      mload(0x40)
+      tag_31
+      swap2
+      swap1
+      tag_32
+      jump	// in
+    tag_31:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "src/dependencies/solmate/RolesAuthority.sol":3865:4202  function setUserRole(... */
+    tag_6:
+      tag_33
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_34
+      swap2
+      swap1
+      tag_35
+      jump	// in
+    tag_34:
+      tag_36
+      jump	// in
+    tag_33:
+      stop
+        /* "src/dependencies/solmate/RolesAuthority.sol":1760:1836  mapping(address => mapping(bytes4 => bytes32)) public getRolesWithCapability */
+    tag_7:
+      tag_37
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_38
+      swap2
+      swap1
+      tag_29
+      jump	// in
+    tag_38:
+      tag_39
+      jump	// in
+    tag_37:
+      mload(0x40)
+      tag_40
+      swap2
+      swap1
+      tag_23
+      jump	// in
+    tag_40:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "src/dependencies/solmate/Auth.sol":1746:2196  function setAuthority(Authority newAuthority) public virtual {... */
+    tag_8:
+      tag_41
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_42
+      swap2
+      swap1
+      tag_43
+      jump	// in
+    tag_42:
+      tag_44
+      jump	// in
+    tag_41:
+      stop
+        /* "src/dependencies/solmate/RolesAuthority.sol":3226:3670  function setRoleCapability(... */
+    tag_9:
+      tag_45
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_46
+      swap2
+      swap1
+      tag_47
+      jump	// in
+    tag_46:
+      tag_48
+      jump	// in
+    tag_45:
+      stop
+        /* "src/dependencies/solmate/Auth.sol":758:778  address public owner */
+    tag_10:
+      tag_49
+      tag_50
+      jump	// in
+    tag_49:
+      mload(0x40)
+      tag_51
+      swap2
+      swap1
+      tag_52
+      jump	// in
+    tag_51:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "src/dependencies/solmate/RolesAuthority.sol":2006:2246  function doesRoleHaveCapability(... */
+    tag_11:
+      tag_53
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_54
+      swap2
+      swap1
+      tag_55
+      jump	// in
+    tag_54:
+      tag_56
+      jump	// in
+    tag_53:
+      mload(0x40)
+      tag_57
+      swap2
+      swap1
+      tag_32
+      jump	// in
+    tag_57:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "src/dependencies/solmate/RolesAuthority.sol":2438:2748  function canCall(... */
+    tag_12:
+      tag_58
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_59
+      swap2
+      swap1
+      tag_60
+      jump	// in
+    tag_59:
+      tag_61
+      jump	// in
+    tag_58:
+      mload(0x40)
+      tag_62
+      swap2
+      swap1
+      tag_32
+      jump	// in
+    tag_62:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "src/dependencies/solmate/Auth.sol":785:811  Authority public authority */
+    tag_13:
+      tag_63
+      tag_64
+      jump	// in
+    tag_63:
+      mload(0x40)
+      tag_65
+      swap2
+      swap1
+      tag_66
+      jump	// in
+    tag_65:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "src/dependencies/solmate/RolesAuthority.sol":2948:3220  function setPublicCapability(... */
+    tag_14:
+      tag_67
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_68
+      swap2
+      swap1
+      tag_69
+      jump	// in
+    tag_68:
+      tag_70
+      jump	// in
+    tag_67:
+      stop
+        /* "src/dependencies/solmate/RolesAuthority.sol":1843:2000  function doesUserHaveRole(address user, uint8 role) public view virtual returns (bool) {... */
+    tag_15:
+      tag_71
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_72
+      swap2
+      swap1
+      tag_73
+      jump	// in
+    tag_72:
+      tag_74
+      jump	// in
+    tag_71:
+      mload(0x40)
+      tag_75
+      swap2
+      swap1
+      tag_32
+      jump	// in
+    tag_75:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "src/dependencies/solmate/RolesAuthority.sol":1630:1677  mapping(address => bytes32) public getUserRoles */
+    tag_21:
+      mstore(0x20, 0x02)
+      dup1
+      0x00
+      mstore
+      keccak256(0x00, 0x40)
+      0x00
+      swap2
+      pop
+      swap1
+      pop
+      sload
+      dup2
+      jump	// out
+        /* "src/dependencies/solmate/Auth.sol":2202:2349  function setOwner(address newOwner) public virtual requiresAuth {... */
+    tag_26:
+        /* "src/dependencies/solmate/Auth.sol":1125:1158  isAuthorized(msg.sender, msg.sig) */
+      tag_79
+        /* "src/dependencies/solmate/Auth.sol":1138:1148  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":1150:1157  msg.sig */
+      and(0xffffffff00000000000000000000000000000000000000000000000000000000, calldataload(0x00))
+        /* "src/dependencies/solmate/Auth.sol":1125:1137  isAuthorized */
+      tag_80
+        /* "src/dependencies/solmate/Auth.sol":1125:1158  isAuthorized(msg.sender, msg.sig) */
+      jump	// in
+    tag_79:
+        /* "src/dependencies/solmate/Auth.sol":1117:1175  require(isAuthorized(msg.sender, msg.sig), "UNAUTHORIZED") */
+      tag_81
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      tag_82
+      swap1
+      tag_83
+      jump	// in
+    tag_82:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_81:
+        /* "src/dependencies/solmate/Auth.sol":2284:2292  newOwner */
+      dup1
+        /* "src/dependencies/solmate/Auth.sol":2276:2281  owner */
+      0x00
+      0x02
+        /* "src/dependencies/solmate/Auth.sol":2276:2292  owner = newOwner */
+      0x0100
+      exp
+      dup2
+      sload
+      dup2
+      0xffffffffffffffffffffffffffffffffffffffff
+      mul
+      not
+      and
+      swap1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/Auth.sol":2333:2341  newOwner */
+      dup1
+        /* "src/dependencies/solmate/Auth.sol":2308:2342  OwnerUpdated(msg.sender, newOwner) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":2321:2331  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":2308:2342  OwnerUpdated(msg.sender, newOwner) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0x8292fce18fa69edf4db7b94ea2e58241df0ae57f97e0a6c9b29067028bf92d76
+      mload(0x40)
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "src/dependencies/solmate/Auth.sol":2202:2349  function setOwner(address newOwner) public virtual requiresAuth {... */
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/RolesAuthority.sol":1684:1753  mapping(address => mapping(bytes4 => bool)) public isCapabilityPublic */
+    tag_30:
+      mstore(0x20, 0x03)
+      dup2
+      0x00
+      mstore
+      mstore(0x20, keccak256(0x00, 0x40))
+      dup1
+      0x00
+      mstore
+      keccak256(0x00, 0x40)
+      0x00
+      swap2
+      pop
+      swap2
+      pop
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xff
+      and
+      dup2
+      jump	// out
+        /* "src/dependencies/solmate/RolesAuthority.sol":3865:4202  function setUserRole(... */
+    tag_36:
+        /* "src/dependencies/solmate/Auth.sol":1125:1158  isAuthorized(msg.sender, msg.sig) */
+      tag_86
+        /* "src/dependencies/solmate/Auth.sol":1138:1148  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":1150:1157  msg.sig */
+      and(0xffffffff00000000000000000000000000000000000000000000000000000000, calldataload(0x00))
+        /* "src/dependencies/solmate/Auth.sol":1125:1137  isAuthorized */
+      tag_80
+        /* "src/dependencies/solmate/Auth.sol":1125:1158  isAuthorized(msg.sender, msg.sig) */
+      jump	// in
+    tag_86:
+        /* "src/dependencies/solmate/Auth.sol":1117:1175  require(isAuthorized(msg.sender, msg.sig), "UNAUTHORIZED") */
+      tag_87
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      tag_88
+      swap1
+      tag_83
+      jump	// in
+    tag_88:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_87:
+        /* "src/dependencies/solmate/RolesAuthority.sol":3998:4005  enabled */
+      dup1
+        /* "src/dependencies/solmate/RolesAuthority.sol":3994:4144  if (enabled) {... */
+      iszero
+      tag_90
+      jumpi
+        /* "src/dependencies/solmate/RolesAuthority.sol":4056:4060  role */
+      dup2
+        /* "src/dependencies/solmate/RolesAuthority.sol":4051:4060  1 << role */
+      0xff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":4051:4052  1 */
+      0x01
+        /* "src/dependencies/solmate/RolesAuthority.sol":4051:4060  1 << role */
+      swap1
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":4043:4061  bytes32(1 << role) */
+      0x00
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":4021:4033  getUserRoles */
+      0x02
+        /* "src/dependencies/solmate/RolesAuthority.sol":4021:4039  getUserRoles[user] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":4034:4038  user */
+      dup6
+        /* "src/dependencies/solmate/RolesAuthority.sol":4021:4039  getUserRoles[user] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":4021:4061  getUserRoles[user] |= bytes32(1 << role) */
+      dup3
+      dup3
+      sload
+      or
+      swap3
+      pop
+      pop
+      dup2
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":3994:4144  if (enabled) {... */
+      jump(tag_91)
+    tag_90:
+        /* "src/dependencies/solmate/RolesAuthority.sol":4128:4132  role */
+      dup2
+        /* "src/dependencies/solmate/RolesAuthority.sol":4123:4132  1 << role */
+      0xff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":4123:4124  1 */
+      0x01
+        /* "src/dependencies/solmate/RolesAuthority.sol":4123:4132  1 << role */
+      swap1
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":4115:4133  bytes32(1 << role) */
+      0x00
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":4114:4133  ~bytes32(1 << role) */
+      not
+        /* "src/dependencies/solmate/RolesAuthority.sol":4092:4104  getUserRoles */
+      0x02
+        /* "src/dependencies/solmate/RolesAuthority.sol":4092:4110  getUserRoles[user] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":4105:4109  user */
+      dup6
+        /* "src/dependencies/solmate/RolesAuthority.sol":4092:4110  getUserRoles[user] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":4092:4133  getUserRoles[user] &= ~bytes32(1 << role) */
+      dup3
+      dup3
+      sload
+      and
+      swap3
+      pop
+      pop
+      dup2
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":3994:4144  if (enabled) {... */
+    tag_91:
+        /* "src/dependencies/solmate/RolesAuthority.sol":4181:4185  role */
+      dup2
+        /* "src/dependencies/solmate/RolesAuthority.sol":4159:4195  UserRoleUpdated(user, role, enabled) */
+      0xff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":4175:4179  user */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":4159:4195  UserRoleUpdated(user, role, enabled) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0x4c9bdd0c8e073eb5eda2250b18d8e5121ff27b62064fbeeeed4869bb99bc5bf2
+        /* "src/dependencies/solmate/RolesAuthority.sol":4187:4194  enabled */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":4159:4195  UserRoleUpdated(user, role, enabled) */
+      mload(0x40)
+      tag_92
+      swap2
+      swap1
+      tag_32
+      jump	// in
+    tag_92:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "src/dependencies/solmate/RolesAuthority.sol":3865:4202  function setUserRole(... */
+      pop
+      pop
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/RolesAuthority.sol":1760:1836  mapping(address => mapping(bytes4 => bytes32)) public getRolesWithCapability */
+    tag_39:
+      mstore(0x20, 0x04)
+      dup2
+      0x00
+      mstore
+      mstore(0x20, keccak256(0x00, 0x40))
+      dup1
+      0x00
+      mstore
+      keccak256(0x00, 0x40)
+      0x00
+      swap2
+      pop
+      swap2
+      pop
+      pop
+      sload
+      dup2
+      jump	// out
+        /* "src/dependencies/solmate/Auth.sol":1746:2196  function setAuthority(Authority newAuthority) public virtual {... */
+    tag_44:
+        /* "src/dependencies/solmate/Auth.sol":2017:2022  owner */
+      0x00
+      0x02
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":2003:2022  msg.sender == owner */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":2003:2013  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":2003:2022  msg.sender == owner */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+        /* "src/dependencies/solmate/Auth.sol":2003:2079  msg.sender == owner || authority.canCall(msg.sender, address(this), msg.sig) */
+      dup1
+      tag_94
+      jumpi
+      pop
+        /* "src/dependencies/solmate/Auth.sol":2026:2035  authority */
+      0x01
+      0x00
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":2026:2043  authority.canCall */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xb7009613
+        /* "src/dependencies/solmate/Auth.sol":2044:2054  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":2064:2068  this */
+      address
+        /* "src/dependencies/solmate/Auth.sol":2071:2078  msg.sig */
+      and(0xffffffff00000000000000000000000000000000000000000000000000000000, calldataload(0x00))
+        /* "src/dependencies/solmate/Auth.sol":2026:2079  authority.canCall(msg.sender, address(this), msg.sig) */
+      mload(0x40)
+      dup5
+      0xffffffff
+      and
+      0xe0
+      shl
+      dup2
+      mstore
+      0x04
+      add
+      tag_95
+      swap4
+      swap3
+      swap2
+      swap1
+      tag_96
+      jump	// in
+    tag_95:
+      0x20
+      mload(0x40)
+      dup1
+      dup4
+      sub
+      dup2
+      dup7
+      gas
+      staticcall
+      iszero
+      dup1
+      iszero
+      tag_98
+      jumpi
+      returndatasize
+      0x00
+      dup1
+      returndatacopy
+      revert(0x00, returndatasize)
+    tag_98:
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      returndatasize
+      not(0x1f)
+      0x1f
+      dup3
+      add
+      and
+      dup3
+      add
+      dup1
+      0x40
+      mstore
+      pop
+      dup2
+      add
+      swap1
+      tag_99
+      swap2
+      swap1
+      tag_100
+      jump	// in
+    tag_99:
+        /* "src/dependencies/solmate/Auth.sol":2003:2079  msg.sender == owner || authority.canCall(msg.sender, address(this), msg.sig) */
+    tag_94:
+        /* "src/dependencies/solmate/Auth.sol":1995:2096  require(msg.sender == owner || authority.canCall(msg.sender, address(this), msg.sig), "UNAUTHORIZED") */
+      tag_101
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      tag_102
+      swap1
+      tag_83
+      jump	// in
+    tag_102:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_101:
+        /* "src/dependencies/solmate/Auth.sol":2119:2131  newAuthority */
+      dup1
+        /* "src/dependencies/solmate/Auth.sol":2107:2116  authority */
+      0x01
+      0x00
+        /* "src/dependencies/solmate/Auth.sol":2107:2131  authority = newAuthority */
+      0x0100
+      exp
+      dup2
+      sload
+      dup2
+      0xffffffffffffffffffffffffffffffffffffffff
+      mul
+      not
+      and
+      swap1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/Auth.sol":2176:2188  newAuthority */
+      dup1
+        /* "src/dependencies/solmate/Auth.sol":2147:2189  AuthorityUpdated(msg.sender, newAuthority) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":2164:2174  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":2147:2189  AuthorityUpdated(msg.sender, newAuthority) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xa3396fd7f6e0a21b50e5089d2da70d5ac0a3bbbd1f617a93f134b76389980198
+      mload(0x40)
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "src/dependencies/solmate/Auth.sol":1746:2196  function setAuthority(Authority newAuthority) public virtual {... */
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/RolesAuthority.sol":3226:3670  function setRoleCapability(... */
+    tag_48:
+        /* "src/dependencies/solmate/Auth.sol":1125:1158  isAuthorized(msg.sender, msg.sig) */
+      tag_104
+        /* "src/dependencies/solmate/Auth.sol":1138:1148  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":1150:1157  msg.sig */
+      and(0xffffffff00000000000000000000000000000000000000000000000000000000, calldataload(0x00))
+        /* "src/dependencies/solmate/Auth.sol":1125:1137  isAuthorized */
+      tag_80
+        /* "src/dependencies/solmate/Auth.sol":1125:1158  isAuthorized(msg.sender, msg.sig) */
+      jump	// in
+    tag_104:
+        /* "src/dependencies/solmate/Auth.sol":1117:1175  require(isAuthorized(msg.sender, msg.sig), "UNAUTHORIZED") */
+      tag_105
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      tag_106
+      swap1
+      tag_83
+      jump	// in
+    tag_106:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_105:
+        /* "src/dependencies/solmate/RolesAuthority.sol":3395:3402  enabled */
+      dup1
+        /* "src/dependencies/solmate/RolesAuthority.sol":3391:3591  if (enabled) {... */
+      iszero
+      tag_108
+      jumpi
+        /* "src/dependencies/solmate/RolesAuthority.sol":3478:3482  role */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":3473:3482  1 << role */
+      0xff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":3473:3474  1 */
+      0x01
+        /* "src/dependencies/solmate/RolesAuthority.sol":3473:3482  1 << role */
+      swap1
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":3465:3483  bytes32(1 << role) */
+      0x00
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":3418:3440  getRolesWithCapability */
+      0x04
+        /* "src/dependencies/solmate/RolesAuthority.sol":3418:3448  getRolesWithCapability[target] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3441:3447  target */
+      dup6
+        /* "src/dependencies/solmate/RolesAuthority.sol":3418:3448  getRolesWithCapability[target] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "src/dependencies/solmate/RolesAuthority.sol":3418:3461  getRolesWithCapability[target][functionSig] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3449:3460  functionSig */
+      dup5
+        /* "src/dependencies/solmate/RolesAuthority.sol":3418:3461  getRolesWithCapability[target][functionSig] */
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3418:3483  getRolesWithCapability[target][functionSig] |= bytes32(1 << role) */
+      dup3
+      dup3
+      sload
+      or
+      swap3
+      pop
+      pop
+      dup2
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":3391:3591  if (enabled) {... */
+      jump(tag_109)
+    tag_108:
+        /* "src/dependencies/solmate/RolesAuthority.sol":3575:3579  role */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":3570:3579  1 << role */
+      0xff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":3570:3571  1 */
+      0x01
+        /* "src/dependencies/solmate/RolesAuthority.sol":3570:3579  1 << role */
+      swap1
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":3562:3580  bytes32(1 << role) */
+      0x00
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":3561:3580  ~bytes32(1 << role) */
+      not
+        /* "src/dependencies/solmate/RolesAuthority.sol":3514:3536  getRolesWithCapability */
+      0x04
+        /* "src/dependencies/solmate/RolesAuthority.sol":3514:3544  getRolesWithCapability[target] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3537:3543  target */
+      dup6
+        /* "src/dependencies/solmate/RolesAuthority.sol":3514:3544  getRolesWithCapability[target] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "src/dependencies/solmate/RolesAuthority.sol":3514:3557  getRolesWithCapability[target][functionSig] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3545:3556  functionSig */
+      dup5
+        /* "src/dependencies/solmate/RolesAuthority.sol":3514:3557  getRolesWithCapability[target][functionSig] */
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3514:3580  getRolesWithCapability[target][functionSig] &= ~bytes32(1 << role) */
+      dup3
+      dup3
+      sload
+      and
+      swap3
+      pop
+      pop
+      dup2
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":3391:3591  if (enabled) {... */
+    tag_109:
+        /* "src/dependencies/solmate/RolesAuthority.sol":3642:3653  functionSig */
+      dup2
+        /* "src/dependencies/solmate/RolesAuthority.sol":3606:3663  RoleCapabilityUpdated(role, target, functionSig, enabled) */
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":3634:3640  target */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":3606:3663  RoleCapabilityUpdated(role, target, functionSig, enabled) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":3628:3632  role */
+      dup6
+        /* "src/dependencies/solmate/RolesAuthority.sol":3606:3663  RoleCapabilityUpdated(role, target, functionSig, enabled) */
+      0xff
+      and
+      0xa52ea92e6e955aa8ac66420b86350f7139959adfcc7e6a14eee1bd116d09860e
+        /* "src/dependencies/solmate/RolesAuthority.sol":3655:3662  enabled */
+      dup5
+        /* "src/dependencies/solmate/RolesAuthority.sol":3606:3663  RoleCapabilityUpdated(role, target, functionSig, enabled) */
+      mload(0x40)
+      tag_110
+      swap2
+      swap1
+      tag_32
+      jump	// in
+    tag_110:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log4
+        /* "src/dependencies/solmate/RolesAuthority.sol":3226:3670  function setRoleCapability(... */
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/Auth.sol":758:778  address public owner */
+    tag_50:
+      0x00
+      0x02
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      jump	// out
+        /* "src/dependencies/solmate/RolesAuthority.sol":2006:2246  function doesRoleHaveCapability(... */
+    tag_56:
+        /* "src/dependencies/solmate/RolesAuthority.sol":2145:2149  bool */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2238:2239  0 */
+      dup1
+        /* "src/dependencies/solmate/RolesAuthority.sol":2233:2234  1 */
+      0x01
+        /* "src/dependencies/solmate/RolesAuthority.sol":2225:2229  role */
+      dup6
+        /* "src/dependencies/solmate/RolesAuthority.sol":2169:2229  uint256(getRolesWithCapability[target][functionSig]) >> role */
+      0xff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":2177:2199  getRolesWithCapability */
+      0x04
+        /* "src/dependencies/solmate/RolesAuthority.sol":2177:2207  getRolesWithCapability[target] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2200:2206  target */
+      dup8
+        /* "src/dependencies/solmate/RolesAuthority.sol":2177:2207  getRolesWithCapability[target] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "src/dependencies/solmate/RolesAuthority.sol":2177:2220  getRolesWithCapability[target][functionSig] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2208:2219  functionSig */
+      dup7
+        /* "src/dependencies/solmate/RolesAuthority.sol":2177:2220  getRolesWithCapability[target][functionSig] */
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "src/dependencies/solmate/RolesAuthority.sol":2169:2221  uint256(getRolesWithCapability[target][functionSig]) */
+      0x00
+      shr
+        /* "src/dependencies/solmate/RolesAuthority.sol":2169:2229  uint256(getRolesWithCapability[target][functionSig]) >> role */
+      swap1
+      shr
+        /* "src/dependencies/solmate/RolesAuthority.sol":2168:2234  (uint256(getRolesWithCapability[target][functionSig]) >> role) & 1 */
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":2168:2239  (uint256(getRolesWithCapability[target][functionSig]) >> role) & 1 != 0 */
+      eq
+      iszero
+        /* "src/dependencies/solmate/RolesAuthority.sol":2161:2239  return (uint256(getRolesWithCapability[target][functionSig]) >> role) & 1 != 0 */
+      swap1
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":2006:2246  function doesRoleHaveCapability(... */
+      swap4
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/RolesAuthority.sol":2438:2748  function canCall(... */
+    tag_61:
+        /* "src/dependencies/solmate/RolesAuthority.sol":2573:2577  bool */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2608:2626  isCapabilityPublic */
+      0x03
+        /* "src/dependencies/solmate/RolesAuthority.sol":2608:2634  isCapabilityPublic[target] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2627:2633  target */
+      dup5
+        /* "src/dependencies/solmate/RolesAuthority.sol":2608:2634  isCapabilityPublic[target] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "src/dependencies/solmate/RolesAuthority.sol":2608:2647  isCapabilityPublic[target][functionSig] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2635:2646  functionSig */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":2608:2647  isCapabilityPublic[target][functionSig] */
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      0x00
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":2608:2741  isCapabilityPublic[target][functionSig] ||... */
+      dup1
+      tag_113
+      jumpi
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":2698:2720  getRolesWithCapability */
+      0x04
+        /* "src/dependencies/solmate/RolesAuthority.sol":2698:2728  getRolesWithCapability[target] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2721:2727  target */
+      dup5
+        /* "src/dependencies/solmate/RolesAuthority.sol":2698:2728  getRolesWithCapability[target] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "src/dependencies/solmate/RolesAuthority.sol":2698:2741  getRolesWithCapability[target][functionSig] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2729:2740  functionSig */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":2698:2741  getRolesWithCapability[target][functionSig] */
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "src/dependencies/solmate/RolesAuthority.sol":2677:2689  getUserRoles */
+      0x02
+        /* "src/dependencies/solmate/RolesAuthority.sol":2677:2695  getUserRoles[user] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2690:2694  user */
+      dup7
+        /* "src/dependencies/solmate/RolesAuthority.sol":2677:2695  getUserRoles[user] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "src/dependencies/solmate/RolesAuthority.sol":2677:2741  getUserRoles[user] & getRolesWithCapability[target][functionSig] */
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":2671:2672  0 */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":2663:2673  bytes32(0) */
+      dup1
+      shl
+        /* "src/dependencies/solmate/RolesAuthority.sol":2663:2741  bytes32(0) != getUserRoles[user] & getRolesWithCapability[target][functionSig] */
+      eq
+      iszero
+        /* "src/dependencies/solmate/RolesAuthority.sol":2608:2741  isCapabilityPublic[target][functionSig] ||... */
+    tag_113:
+        /* "src/dependencies/solmate/RolesAuthority.sol":2589:2741  return... */
+      swap1
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":2438:2748  function canCall(... */
+      swap4
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/Auth.sol":785:811  Authority public authority */
+    tag_64:
+      0x01
+      0x00
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      jump	// out
+        /* "src/dependencies/solmate/RolesAuthority.sol":2948:3220  function setPublicCapability(... */
+    tag_70:
+        /* "src/dependencies/solmate/Auth.sol":1125:1158  isAuthorized(msg.sender, msg.sig) */
+      tag_115
+        /* "src/dependencies/solmate/Auth.sol":1138:1148  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":1150:1157  msg.sig */
+      and(0xffffffff00000000000000000000000000000000000000000000000000000000, calldataload(0x00))
+        /* "src/dependencies/solmate/Auth.sol":1125:1137  isAuthorized */
+      tag_80
+        /* "src/dependencies/solmate/Auth.sol":1125:1158  isAuthorized(msg.sender, msg.sig) */
+      jump	// in
+    tag_115:
+        /* "src/dependencies/solmate/Auth.sol":1117:1175  require(isAuthorized(msg.sender, msg.sig), "UNAUTHORIZED") */
+      tag_116
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      tag_117
+      swap1
+      tag_83
+      jump	// in
+    tag_117:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_116:
+        /* "src/dependencies/solmate/RolesAuthority.sol":3137:3144  enabled */
+      dup1
+        /* "src/dependencies/solmate/RolesAuthority.sol":3095:3113  isCapabilityPublic */
+      0x03
+        /* "src/dependencies/solmate/RolesAuthority.sol":3095:3121  isCapabilityPublic[target] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3114:3120  target */
+      dup6
+        /* "src/dependencies/solmate/RolesAuthority.sol":3095:3121  isCapabilityPublic[target] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "src/dependencies/solmate/RolesAuthority.sol":3095:3134  isCapabilityPublic[target][functionSig] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3122:3133  functionSig */
+      dup5
+        /* "src/dependencies/solmate/RolesAuthority.sol":3095:3134  isCapabilityPublic[target][functionSig] */
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":3095:3144  isCapabilityPublic[target][functionSig] = enabled */
+      0x0100
+      exp
+      dup2
+      sload
+      dup2
+      0xff
+      mul
+      not
+      and
+      swap1
+      dup4
+      iszero
+      iszero
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":3192:3203  functionSig */
+      dup2
+        /* "src/dependencies/solmate/RolesAuthority.sol":3160:3213  PublicCapabilityUpdated(target, functionSig, enabled) */
+      not(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff)
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":3184:3190  target */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":3160:3213  PublicCapabilityUpdated(target, functionSig, enabled) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0x950a343f5d10445e82a71036d3f4fb3016180a25805141932543b83e2078a93e
+        /* "src/dependencies/solmate/RolesAuthority.sol":3205:3212  enabled */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":3160:3213  PublicCapabilityUpdated(target, functionSig, enabled) */
+      mload(0x40)
+      tag_119
+      swap2
+      swap1
+      tag_32
+      jump	// in
+    tag_119:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "src/dependencies/solmate/RolesAuthority.sol":2948:3220  function setPublicCapability(... */
+      pop
+      pop
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/RolesAuthority.sol":1843:2000  function doesUserHaveRole(address user, uint8 role) public view virtual returns (bool) {... */
+    tag_74:
+        /* "src/dependencies/solmate/RolesAuthority.sol":1924:1928  bool */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":1992:1993  0 */
+      dup1
+        /* "src/dependencies/solmate/RolesAuthority.sol":1987:1988  1 */
+      0x01
+        /* "src/dependencies/solmate/RolesAuthority.sol":1979:1983  role */
+      dup4
+        /* "src/dependencies/solmate/RolesAuthority.sol":1948:1983  uint256(getUserRoles[user]) >> role */
+      0xff
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":1956:1968  getUserRoles */
+      0x02
+        /* "src/dependencies/solmate/RolesAuthority.sol":1956:1974  getUserRoles[user] */
+      0x00
+        /* "src/dependencies/solmate/RolesAuthority.sol":1969:1973  user */
+      dup8
+        /* "src/dependencies/solmate/RolesAuthority.sol":1956:1974  getUserRoles[user] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "src/dependencies/solmate/RolesAuthority.sol":1948:1975  uint256(getUserRoles[user]) */
+      0x00
+      shr
+        /* "src/dependencies/solmate/RolesAuthority.sol":1948:1983  uint256(getUserRoles[user]) >> role */
+      swap1
+      shr
+        /* "src/dependencies/solmate/RolesAuthority.sol":1947:1988  (uint256(getUserRoles[user]) >> role) & 1 */
+      and
+        /* "src/dependencies/solmate/RolesAuthority.sol":1947:1993  (uint256(getUserRoles[user]) >> role) & 1 != 0 */
+      eq
+      iszero
+        /* "src/dependencies/solmate/RolesAuthority.sol":1940:1993  return (uint256(getUserRoles[user]) >> role) & 1 != 0 */
+      swap1
+      pop
+        /* "src/dependencies/solmate/RolesAuthority.sol":1843:2000  function doesUserHaveRole(address user, uint8 role) public view virtual returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-contracts/contracts/utils/Address.sol":1175:1495  function isContract(address account) internal view returns (bool) {... */
+    tag_76:
+        /* "openzeppelin-contracts/contracts/utils/Address.sol":1235:1239  bool */
+      0x00
+        /* "openzeppelin-contracts/contracts/utils/Address.sol":1487:1488  0 */
+      dup1
+        /* "openzeppelin-contracts/contracts/utils/Address.sol":1465:1472  account */
+      dup3
+        /* "openzeppelin-contracts/contracts/utils/Address.sol":1465:1484  account.code.length */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      extcodesize
+        /* "openzeppelin-contracts/contracts/utils/Address.sol":1465:1488  account.code.length > 0 */
+      gt
+        /* "openzeppelin-contracts/contracts/utils/Address.sol":1458:1488  return account.code.length > 0 */
+      swap1
+      pop
+        /* "openzeppelin-contracts/contracts/utils/Address.sol":1175:1495  function isContract(address account) internal view returns (bool) {... */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/Auth.sol":818:1069  function __Auth_Init(address _owner, Authority _authority) internal onlyInitializing {... */
+    tag_77:
+        /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":5341:5354  _initializing */
+      0x00
+      0x01
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xff
+      and
+        /* "openzeppelin-contracts/contracts/proxy/utils/Initializable.sol":5333:5402  require(_initializing, "Initializable: contract is not initializing") */
+      tag_123
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      tag_124
+      swap1
+      tag_125
+      jump	// in
+    tag_124:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_123:
+        /* "src/dependencies/solmate/Auth.sol":921:927  _owner */
+      dup2
+        /* "src/dependencies/solmate/Auth.sol":913:918  owner */
+      0x00
+      0x02
+        /* "src/dependencies/solmate/Auth.sol":913:927  owner = _owner */
+      0x0100
+      exp
+      dup2
+      sload
+      dup2
+      0xffffffffffffffffffffffffffffffffffffffff
+      mul
+      not
+      and
+      swap1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/Auth.sol":949:959  _authority */
+      dup1
+        /* "src/dependencies/solmate/Auth.sol":937:946  authority */
+      0x01
+      0x00
+        /* "src/dependencies/solmate/Auth.sol":937:959  authority = _authority */
+      0x0100
+      exp
+      dup2
+      sload
+      dup2
+      0xffffffffffffffffffffffffffffffffffffffff
+      mul
+      not
+      and
+      swap1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "src/dependencies/solmate/Auth.sol":1000:1006  _owner */
+      dup2
+        /* "src/dependencies/solmate/Auth.sol":975:1007  OwnerUpdated(msg.sender, _owner) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":988:998  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":975:1007  OwnerUpdated(msg.sender, _owner) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0x8292fce18fa69edf4db7b94ea2e58241df0ae57f97e0a6c9b29067028bf92d76
+      mload(0x40)
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "src/dependencies/solmate/Auth.sol":1051:1061  _authority */
+      dup1
+        /* "src/dependencies/solmate/Auth.sol":1022:1062  AuthorityUpdated(msg.sender, _authority) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":1039:1049  msg.sender */
+      caller
+        /* "src/dependencies/solmate/Auth.sol":1022:1062  AuthorityUpdated(msg.sender, _authority) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xa3396fd7f6e0a21b50e5089d2da70d5ac0a3bbbd1f617a93f134b76389980198
+      mload(0x40)
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "src/dependencies/solmate/Auth.sol":818:1069  function __Auth_Init(address _owner, Authority _authority) internal onlyInitializing {... */
+      pop
+      pop
+      jump	// out
+        /* "src/dependencies/solmate/Auth.sol":1200:1740  function isAuthorized(address user, bytes4 functionSig) internal view virtual returns (bool) {... */
+    tag_80:
+        /* "src/dependencies/solmate/Auth.sol":1287:1291  bool */
+      0x00
+        /* "src/dependencies/solmate/Auth.sol":1303:1317  Authority auth */
+      dup1
+        /* "src/dependencies/solmate/Auth.sol":1320:1329  authority */
+      0x01
+      0x00
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":1303:1329  Authority auth = authority */
+      swap1
+      pop
+        /* "src/dependencies/solmate/Auth.sol":1663:1664  0 */
+      0x00
+        /* "src/dependencies/solmate/Auth.sol":1638:1665  address(auth) != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":1646:1650  auth */
+      dup2
+        /* "src/dependencies/solmate/Auth.sol":1638:1665  address(auth) != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "src/dependencies/solmate/Auth.sol":1638:1715  address(auth) != address(0) && auth.canCall(user, address(this), functionSig) */
+      dup1
+      iszero
+      tag_128
+      jumpi
+      pop
+        /* "src/dependencies/solmate/Auth.sol":1669:1673  auth */
+      dup1
+        /* "src/dependencies/solmate/Auth.sol":1669:1681  auth.canCall */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xb7009613
+        /* "src/dependencies/solmate/Auth.sol":1682:1686  user */
+      dup6
+        /* "src/dependencies/solmate/Auth.sol":1696:1700  this */
+      address
+        /* "src/dependencies/solmate/Auth.sol":1703:1714  functionSig */
+      dup7
+        /* "src/dependencies/solmate/Auth.sol":1669:1715  auth.canCall(user, address(this), functionSig) */
+      mload(0x40)
+      dup5
+      0xffffffff
+      and
+      0xe0
+      shl
+      dup2
+      mstore
+      0x04
+      add
+      tag_129
+      swap4
+      swap3
+      swap2
+      swap1
+      tag_96
+      jump	// in
+    tag_129:
+      0x20
+      mload(0x40)
+      dup1
+      dup4
+      sub
+      dup2
+      dup7
+      gas
+      staticcall
+      iszero
+      dup1
+      iszero
+      tag_131
+      jumpi
+      returndatasize
+      0x00
+      dup1
+      returndatacopy
+      revert(0x00, returndatasize)
+    tag_131:
+      pop
+      pop
+      pop
+      pop
+      mload(0x40)
+      returndatasize
+      not(0x1f)
+      0x1f
+      dup3
+      add
+      and
+      dup3
+      add
+      dup1
+      0x40
+      mstore
+      pop
+      dup2
+      add
+      swap1
+      tag_132
+      swap2
+      swap1
+      tag_100
+      jump	// in
+    tag_132:
+        /* "src/dependencies/solmate/Auth.sol":1638:1715  address(auth) != address(0) && auth.canCall(user, address(this), functionSig) */
+    tag_128:
+        /* "src/dependencies/solmate/Auth.sol":1637:1733  (address(auth) != address(0) && auth.canCall(user, address(this), functionSig)) || user == owner */
+      dup1
+      tag_133
+      jumpi
+      pop
+        /* "src/dependencies/solmate/Auth.sol":1728:1733  owner */
+      0x00
+      0x02
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":1720:1733  user == owner */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "src/dependencies/solmate/Auth.sol":1720:1724  user */
+      dup5
+        /* "src/dependencies/solmate/Auth.sol":1720:1733  user == owner */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+        /* "src/dependencies/solmate/Auth.sol":1637:1733  (address(auth) != address(0) && auth.canCall(user, address(this), functionSig)) || user == owner */
+    tag_133:
+        /* "src/dependencies/solmate/Auth.sol":1630:1733  return (address(auth) != address(0) && auth.canCall(user, address(this), functionSig)) || user == owner */
+      swap2
+      pop
+      pop
+        /* "src/dependencies/solmate/Auth.sol":1200:1740  function isAuthorized(address user, bytes4 functionSig) internal view virtual returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":88:205   */
+    tag_135:
+        /* "#utility.yul":197:198   */
+      0x00
+        /* "#utility.yul":194:195   */
+      dup1
+        /* "#utility.yul":187:199   */
+      revert
+        /* "#utility.yul":334:460   */
+    tag_137:
+        /* "#utility.yul":371:378   */
+      0x00
+        /* "#utility.yul":411:453   */
+      0xffffffffffffffffffffffffffffffffffffffff
+        /* "#utility.yul":404:409   */
+      dup3
+        /* "#utility.yul":400:454   */
+      and
+        /* "#utility.yul":389:454   */
+      swap1
+      pop
+        /* "#utility.yul":334:460   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":466:562   */
+    tag_138:
+        /* "#utility.yul":503:510   */
+      0x00
+        /* "#utility.yul":532:556   */
+      tag_175
+        /* "#utility.yul":550:555   */
+      dup3
+        /* "#utility.yul":532:556   */
+      tag_137
+      jump	// in
+    tag_175:
+        /* "#utility.yul":521:556   */
+      swap1
+      pop
+        /* "#utility.yul":466:562   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":568:690   */
+    tag_139:
+        /* "#utility.yul":641:665   */
+      tag_177
+        /* "#utility.yul":659:664   */
+      dup2
+        /* "#utility.yul":641:665   */
+      tag_138
+      jump	// in
+    tag_177:
+        /* "#utility.yul":634:639   */
+      dup2
+        /* "#utility.yul":631:666   */
+      eq
+        /* "#utility.yul":621:684   */
+      tag_178
+      jumpi
+        /* "#utility.yul":680:681   */
+      0x00
+        /* "#utility.yul":677:678   */
+      dup1
+        /* "#utility.yul":670:682   */
+      revert
+        /* "#utility.yul":621:684   */
+    tag_178:
+        /* "#utility.yul":568:690   */
+      pop
+      jump	// out
+        /* "#utility.yul":696:835   */
+    tag_140:
+        /* "#utility.yul":742:747   */
+      0x00
+        /* "#utility.yul":780:786   */
+      dup2
+        /* "#utility.yul":767:787   */
+      calldataload
+        /* "#utility.yul":758:787   */
+      swap1
+      pop
+        /* "#utility.yul":796:829   */
+      tag_180
+        /* "#utility.yul":823:828   */
+      dup2
+        /* "#utility.yul":796:829   */
+      tag_139
+      jump	// in
+    tag_180:
+        /* "#utility.yul":696:835   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":841:1170   */
+    tag_20:
+        /* "#utility.yul":900:906   */
+      0x00
+        /* "#utility.yul":949:951   */
+      0x20
+        /* "#utility.yul":937:946   */
+      dup3
+        /* "#utility.yul":928:935   */
+      dup5
+        /* "#utility.yul":924:947   */
+      sub
+        /* "#utility.yul":920:952   */
+      slt
+        /* "#utility.yul":917:1036   */
+      iszero
+      tag_182
+      jumpi
+        /* "#utility.yul":955:1034   */
+      tag_183
+      tag_135
+      jump	// in
+    tag_183:
+        /* "#utility.yul":917:1036   */
+    tag_182:
+        /* "#utility.yul":1075:1076   */
+      0x00
+        /* "#utility.yul":1100:1153   */
+      tag_184
+        /* "#utility.yul":1145:1152   */
+      dup5
+        /* "#utility.yul":1136:1142   */
+      dup3
+        /* "#utility.yul":1125:1134   */
+      dup6
+        /* "#utility.yul":1121:1143   */
+      add
+        /* "#utility.yul":1100:1153   */
+      tag_140
+      jump	// in
+    tag_184:
+        /* "#utility.yul":1090:1153   */
+      swap2
+      pop
+        /* "#utility.yul":1046:1163   */
+      pop
+        /* "#utility.yul":841:1170   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":1176:1253   */
+    tag_141:
+        /* "#utility.yul":1213:1220   */
+      0x00
+        /* "#utility.yul":1242:1247   */
+      dup2
+        /* "#utility.yul":1231:1247   */
+      swap1
+      pop
+        /* "#utility.yul":1176:1253   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":1259:1377   */
+    tag_142:
+        /* "#utility.yul":1346:1370   */
+      tag_187
+        /* "#utility.yul":1364:1369   */
+      dup2
+        /* "#utility.yul":1346:1370   */
+      tag_141
+      jump	// in
+    tag_187:
+        /* "#utility.yul":1341:1344   */
+      dup3
+        /* "#utility.yul":1334:1371   */
+      mstore
+        /* "#utility.yul":1259:1377   */
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":1383:1605   */
+    tag_23:
+        /* "#utility.yul":1476:1480   */
+      0x00
+        /* "#utility.yul":1514:1516   */
+      0x20
+        /* "#utility.yul":1503:1512   */
+      dup3
+        /* "#utility.yul":1499:1517   */
+      add
+        /* "#utility.yul":1491:1517   */
+      swap1
+      pop
+        /* "#utility.yul":1527:1598   */
+      tag_189
+        /* "#utility.yul":1595:1596   */
+      0x00
+        /* "#utility.yul":1584:1593   */
+      dup4
+        /* "#utility.yul":1580:1597   */
+      add
+        /* "#utility.yul":1571:1577   */
+      dup5
+        /* "#utility.yul":1527:1598   */
+      tag_142
+      jump	// in
+    tag_189:
+        /* "#utility.yul":1383:1605   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":1611:1760   */
+    tag_143:
+        /* "#utility.yul":1647:1654   */
+      0x00
+        /* "#utility.yul":1687:1753   */
+      0xffffffff00000000000000000000000000000000000000000000000000000000
+        /* "#utility.yul":1680:1685   */
+      dup3
+        /* "#utility.yul":1676:1754   */
+      and
+        /* "#utility.yul":1665:1754   */
+      swap1
+      pop
+        /* "#utility.yul":1611:1760   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":1766:1886   */
+    tag_144:
+        /* "#utility.yul":1838:1861   */
+      tag_192
+        /* "#utility.yul":1855:1860   */
+      dup2
+        /* "#utility.yul":1838:1861   */
+      tag_143
+      jump	// in
+    tag_192:
+        /* "#utility.yul":1831:1836   */
+      dup2
+        /* "#utility.yul":1828:1862   */
+      eq
+        /* "#utility.yul":1818:1880   */
+      tag_193
+      jumpi
+        /* "#utility.yul":1876:1877   */
+      0x00
+        /* "#utility.yul":1873:1874   */
+      dup1
+        /* "#utility.yul":1866:1878   */
+      revert
+        /* "#utility.yul":1818:1880   */
+    tag_193:
+        /* "#utility.yul":1766:1886   */
+      pop
+      jump	// out
+        /* "#utility.yul":1892:2029   */
+    tag_145:
+        /* "#utility.yul":1937:1942   */
+      0x00
+        /* "#utility.yul":1975:1981   */
+      dup2
+        /* "#utility.yul":1962:1982   */
+      calldataload
+        /* "#utility.yul":1953:1982   */
+      swap1
+      pop
+        /* "#utility.yul":1991:2023   */
+      tag_195
+        /* "#utility.yul":2017:2022   */
+      dup2
+        /* "#utility.yul":1991:2023   */
+      tag_144
+      jump	// in
+    tag_195:
+        /* "#utility.yul":1892:2029   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":2035:2507   */
+    tag_29:
+        /* "#utility.yul":2102:2108   */
+      0x00
+        /* "#utility.yul":2110:2116   */
+      dup1
+        /* "#utility.yul":2159:2161   */
+      0x40
+        /* "#utility.yul":2147:2156   */
+      dup4
+        /* "#utility.yul":2138:2145   */
+      dup6
+        /* "#utility.yul":2134:2157   */
+      sub
+        /* "#utility.yul":2130:2162   */
+      slt
+        /* "#utility.yul":2127:2246   */
+      iszero
+      tag_197
+      jumpi
+        /* "#utility.yul":2165:2244   */
+      tag_198
+      tag_135
+      jump	// in
+    tag_198:
+        /* "#utility.yul":2127:2246   */
+    tag_197:
+        /* "#utility.yul":2285:2286   */
+      0x00
+        /* "#utility.yul":2310:2363   */
+      tag_199
+        /* "#utility.yul":2355:2362   */
+      dup6
+        /* "#utility.yul":2346:2352   */
+      dup3
+        /* "#utility.yul":2335:2344   */
+      dup7
+        /* "#utility.yul":2331:2353   */
+      add
+        /* "#utility.yul":2310:2363   */
+      tag_140
+      jump	// in
+    tag_199:
+        /* "#utility.yul":2300:2363   */
+      swap3
+      pop
+        /* "#utility.yul":2256:2373   */
+      pop
+        /* "#utility.yul":2412:2414   */
+      0x20
+        /* "#utility.yul":2438:2490   */
+      tag_200
+        /* "#utility.yul":2482:2489   */
+      dup6
+        /* "#utility.yul":2473:2479   */
+      dup3
+        /* "#utility.yul":2462:2471   */
+      dup7
+        /* "#utility.yul":2458:2480   */
+      add
+        /* "#utility.yul":2438:2490   */
+      tag_145
+      jump	// in
+    tag_200:
+        /* "#utility.yul":2428:2490   */
+      swap2
+      pop
+        /* "#utility.yul":2383:2500   */
+      pop
+        /* "#utility.yul":2035:2507   */
+      swap3
+      pop
+      swap3
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":2513:2603   */
+    tag_146:
+        /* "#utility.yul":2547:2554   */
+      0x00
+        /* "#utility.yul":2590:2595   */
+      dup2
+        /* "#utility.yul":2583:2596   */
+      iszero
+        /* "#utility.yul":2576:2597   */
+      iszero
+        /* "#utility.yul":2565:2597   */
+      swap1
+      pop
+        /* "#utility.yul":2513:2603   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":2609:2718   */
+    tag_147:
+        /* "#utility.yul":2690:2711   */
+      tag_203
+        /* "#utility.yul":2705:2710   */
+      dup2
+        /* "#utility.yul":2690:2711   */
+      tag_146
+      jump	// in
+    tag_203:
+        /* "#utility.yul":2685:2688   */
+      dup3
+        /* "#utility.yul":2678:2712   */
+      mstore
+        /* "#utility.yul":2609:2718   */
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":2724:2934   */
+    tag_32:
+        /* "#utility.yul":2811:2815   */
+      0x00
+        /* "#utility.yul":2849:2851   */
+      0x20
+        /* "#utility.yul":2838:2847   */
+      dup3
+        /* "#utility.yul":2834:2852   */
+      add
+        /* "#utility.yul":2826:2852   */
+      swap1
+      pop
+        /* "#utility.yul":2862:2927   */
+      tag_205
+        /* "#utility.yul":2924:2925   */
+      0x00
+        /* "#utility.yul":2913:2922   */
+      dup4
+        /* "#utility.yul":2909:2926   */
+      add
+        /* "#utility.yul":2900:2906   */
+      dup5
+        /* "#utility.yul":2862:2927   */
+      tag_147
+      jump	// in
+    tag_205:
+        /* "#utility.yul":2724:2934   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":2940:3026   */
+    tag_148:
+        /* "#utility.yul":2975:2982   */
+      0x00
+        /* "#utility.yul":3015:3019   */
+      0xff
+        /* "#utility.yul":3008:3013   */
+      dup3
+        /* "#utility.yul":3004:3020   */
+      and
+        /* "#utility.yul":2993:3020   */
+      swap1
+      pop
+        /* "#utility.yul":2940:3026   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":3032:3150   */
+    tag_149:
+        /* "#utility.yul":3103:3125   */
+      tag_208
+        /* "#utility.yul":3119:3124   */
+      dup2
+        /* "#utility.yul":3103:3125   */
+      tag_148
+      jump	// in
+    tag_208:
+        /* "#utility.yul":3096:3101   */
+      dup2
+        /* "#utility.yul":3093:3126   */
+      eq
+        /* "#utility.yul":3083:3144   */
+      tag_209
+      jumpi
+        /* "#utility.yul":3140:3141   */
+      0x00
+        /* "#utility.yul":3137:3138   */
+      dup1
+        /* "#utility.yul":3130:3142   */
+      revert
+        /* "#utility.yul":3083:3144   */
+    tag_209:
+        /* "#utility.yul":3032:3150   */
+      pop
+      jump	// out
+        /* "#utility.yul":3156:3291   */
+    tag_150:
+        /* "#utility.yul":3200:3205   */
+      0x00
+        /* "#utility.yul":3238:3244   */
+      dup2
+        /* "#utility.yul":3225:3245   */
+      calldataload
+        /* "#utility.yul":3216:3245   */
+      swap1
+      pop
+        /* "#utility.yul":3254:3285   */
+      tag_211
+        /* "#utility.yul":3279:3284   */
+      dup2
+        /* "#utility.yul":3254:3285   */
+      tag_149
+      jump	// in
+    tag_211:
+        /* "#utility.yul":3156:3291   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":3297:3413   */
+    tag_151:
+        /* "#utility.yul":3367:3388   */
+      tag_213
+        /* "#utility.yul":3382:3387   */
+      dup2
+        /* "#utility.yul":3367:3388   */
+      tag_146
+      jump	// in
+    tag_213:
+        /* "#utility.yul":3360:3365   */
+      dup2
+        /* "#utility.yul":3357:3389   */
+      eq
+        /* "#utility.yul":3347:3407   */
+      tag_214
+      jumpi
+        /* "#utility.yul":3403:3404   */
+      0x00
+        /* "#utility.yul":3400:3401   */
+      dup1
+        /* "#utility.yul":3393:3405   */
+      revert
+        /* "#utility.yul":3347:3407   */
+    tag_214:
+        /* "#utility.yul":3297:3413   */
+      pop
+      jump	// out
+        /* "#utility.yul":3419:3552   */
+    tag_152:
+        /* "#utility.yul":3462:3467   */
+      0x00
+        /* "#utility.yul":3500:3506   */
+      dup2
+        /* "#utility.yul":3487:3507   */
+      calldataload
+        /* "#utility.yul":3478:3507   */
+      swap1
+      pop
+        /* "#utility.yul":3516:3546   */
+      tag_216
+        /* "#utility.yul":3540:3545   */
+      dup2
+        /* "#utility.yul":3516:3546   */
+      tag_151
+      jump	// in
+    tag_216:
+        /* "#utility.yul":3419:3552   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":3558:4167   */
+    tag_35:
+        /* "#utility.yul":3630:3636   */
+      0x00
+        /* "#utility.yul":3638:3644   */
+      dup1
+        /* "#utility.yul":3646:3652   */
+      0x00
+        /* "#utility.yul":3695:3697   */
+      0x60
+        /* "#utility.yul":3683:3692   */
+      dup5
+        /* "#utility.yul":3674:3681   */
+      dup7
+        /* "#utility.yul":3670:3693   */
+      sub
+        /* "#utility.yul":3666:3698   */
+      slt
+        /* "#utility.yul":3663:3782   */
+      iszero
+      tag_218
+      jumpi
+        /* "#utility.yul":3701:3780   */
+      tag_219
+      tag_135
+      jump	// in
+    tag_219:
+        /* "#utility.yul":3663:3782   */
+    tag_218:
+        /* "#utility.yul":3821:3822   */
+      0x00
+        /* "#utility.yul":3846:3899   */
+      tag_220
+        /* "#utility.yul":3891:3898   */
+      dup7
+        /* "#utility.yul":3882:3888   */
+      dup3
+        /* "#utility.yul":3871:3880   */
+      dup8
+        /* "#utility.yul":3867:3889   */
+      add
+        /* "#utility.yul":3846:3899   */
+      tag_140
+      jump	// in
+    tag_220:
+        /* "#utility.yul":3836:3899   */
+      swap4
+      pop
+        /* "#utility.yul":3792:3909   */
+      pop
+        /* "#utility.yul":3948:3950   */
+      0x20
+        /* "#utility.yul":3974:4025   */
+      tag_221
+        /* "#utility.yul":4017:4024   */
+      dup7
+        /* "#utility.yul":4008:4014   */
+      dup3
+        /* "#utility.yul":3997:4006   */
+      dup8
+        /* "#utility.yul":3993:4015   */
+      add
+        /* "#utility.yul":3974:4025   */
+      tag_150
+      jump	// in
+    tag_221:
+        /* "#utility.yul":3964:4025   */
+      swap3
+      pop
+        /* "#utility.yul":3919:4035   */
+      pop
+        /* "#utility.yul":4074:4076   */
+      0x40
+        /* "#utility.yul":4100:4150   */
+      tag_222
+        /* "#utility.yul":4142:4149   */
+      dup7
+        /* "#utility.yul":4133:4139   */
+      dup3
+        /* "#utility.yul":4122:4131   */
+      dup8
+        /* "#utility.yul":4118:4140   */
+      add
+        /* "#utility.yul":4100:4150   */
+      tag_152
+      jump	// in
+    tag_222:
+        /* "#utility.yul":4090:4150   */
+      swap2
+      pop
+        /* "#utility.yul":4045:4160   */
+      pop
+        /* "#utility.yul":3558:4167   */
+      swap3
+      pop
+      swap3
+      pop
+      swap3
+      jump	// out
+        /* "#utility.yul":4173:4287   */
+    tag_153:
+        /* "#utility.yul":4228:4235   */
+      0x00
+        /* "#utility.yul":4257:4281   */
+      tag_224
+        /* "#utility.yul":4275:4280   */
+      dup3
+        /* "#utility.yul":4257:4281   */
+      tag_138
+      jump	// in
+    tag_224:
+        /* "#utility.yul":4246:4281   */
+      swap1
+      pop
+        /* "#utility.yul":4173:4287   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":4293:4451   */
+    tag_154:
+        /* "#utility.yul":4384:4426   */
+      tag_226
+        /* "#utility.yul":4420:4425   */
+      dup2
+        /* "#utility.yul":4384:4426   */
+      tag_153
+      jump	// in
+    tag_226:
+        /* "#utility.yul":4377:4382   */
+      dup2
+        /* "#utility.yul":4374:4427   */
+      eq
+        /* "#utility.yul":4364:4445   */
+      tag_227
+      jumpi
+        /* "#utility.yul":4441:4442   */
+      0x00
+        /* "#utility.yul":4438:4439   */
+      dup1
+        /* "#utility.yul":4431:4443   */
+      revert
+        /* "#utility.yul":4364:4445   */
+    tag_227:
+        /* "#utility.yul":4293:4451   */
+      pop
+      jump	// out
+        /* "#utility.yul":4457:4632   */
+    tag_155:
+        /* "#utility.yul":4521:4526   */
+      0x00
+        /* "#utility.yul":4559:4565   */
+      dup2
+        /* "#utility.yul":4546:4566   */
+      calldataload
+        /* "#utility.yul":4537:4566   */
+      swap1
+      pop
+        /* "#utility.yul":4575:4626   */
+      tag_229
+        /* "#utility.yul":4620:4625   */
+      dup2
+        /* "#utility.yul":4575:4626   */
+      tag_154
+      jump	// in
+    tag_229:
+        /* "#utility.yul":4457:4632   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":4638:5003   */
+    tag_43:
+        /* "#utility.yul":4715:4721   */
+      0x00
+        /* "#utility.yul":4764:4766   */
+      0x20
+        /* "#utility.yul":4752:4761   */
+      dup3
+        /* "#utility.yul":4743:4750   */
+      dup5
+        /* "#utility.yul":4739:4762   */
+      sub
+        /* "#utility.yul":4735:4767   */
+      slt
+        /* "#utility.yul":4732:4851   */
+      iszero
+      tag_231
+      jumpi
+        /* "#utility.yul":4770:4849   */
+      tag_232
+      tag_135
+      jump	// in
+    tag_232:
+        /* "#utility.yul":4732:4851   */
+    tag_231:
+        /* "#utility.yul":4890:4891   */
+      0x00
+        /* "#utility.yul":4915:4986   */
+      tag_233
+        /* "#utility.yul":4978:4985   */
+      dup5
+        /* "#utility.yul":4969:4975   */
+      dup3
+        /* "#utility.yul":4958:4967   */
+      dup6
+        /* "#utility.yul":4954:4976   */
+      add
+        /* "#utility.yul":4915:4986   */
+      tag_155
+      jump	// in
+    tag_233:
+        /* "#utility.yul":4905:4986   */
+      swap2
+      pop
+        /* "#utility.yul":4861:4996   */
+      pop
+        /* "#utility.yul":4638:5003   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":5009:5762   */
+    tag_47:
+        /* "#utility.yul":5089:5095   */
+      0x00
+        /* "#utility.yul":5097:5103   */
+      dup1
+        /* "#utility.yul":5105:5111   */
+      0x00
+        /* "#utility.yul":5113:5119   */
+      dup1
+        /* "#utility.yul":5162:5165   */
+      0x80
+        /* "#utility.yul":5150:5159   */
+      dup6
+        /* "#utility.yul":5141:5148   */
+      dup8
+        /* "#utility.yul":5137:5160   */
+      sub
+        /* "#utility.yul":5133:5166   */
+      slt
+        /* "#utility.yul":5130:5250   */
+      iszero
+      tag_235
+      jumpi
+        /* "#utility.yul":5169:5248   */
+      tag_236
+      tag_135
+      jump	// in
+    tag_236:
+        /* "#utility.yul":5130:5250   */
+    tag_235:
+        /* "#utility.yul":5289:5290   */
+      0x00
+        /* "#utility.yul":5314:5365   */
+      tag_237
+        /* "#utility.yul":5357:5364   */
+      dup8
+        /* "#utility.yul":5348:5354   */
+      dup3
+        /* "#utility.yul":5337:5346   */
+      dup9
+        /* "#utility.yul":5333:5355   */
+      add
+        /* "#utility.yul":5314:5365   */
+      tag_150
+      jump	// in
+    tag_237:
+        /* "#utility.yul":5304:5365   */
+      swap5
+      pop
+        /* "#utility.yul":5260:5375   */
+      pop
+        /* "#utility.yul":5414:5416   */
+      0x20
+        /* "#utility.yul":5440:5493   */
+      tag_238
+        /* "#utility.yul":5485:5492   */
+      dup8
+        /* "#utility.yul":5476:5482   */
+      dup3
+        /* "#utility.yul":5465:5474   */
+      dup9
+        /* "#utility.yul":5461:5483   */
+      add
+        /* "#utility.yul":5440:5493   */
+      tag_140
+      jump	// in
+    tag_238:
+        /* "#utility.yul":5430:5493   */
+      swap4
+      pop
+        /* "#utility.yul":5385:5503   */
+      pop
+        /* "#utility.yul":5542:5544   */
+      0x40
+        /* "#utility.yul":5568:5620   */
+      tag_239
+        /* "#utility.yul":5612:5619   */
+      dup8
+        /* "#utility.yul":5603:5609   */
+      dup3
+        /* "#utility.yul":5592:5601   */
+      dup9
+        /* "#utility.yul":5588:5610   */
+      add
+        /* "#utility.yul":5568:5620   */
+      tag_145
+      jump	// in
+    tag_239:
+        /* "#utility.yul":5558:5620   */
+      swap3
+      pop
+        /* "#utility.yul":5513:5630   */
+      pop
+        /* "#utility.yul":5669:5671   */
+      0x60
+        /* "#utility.yul":5695:5745   */
+      tag_240
+        /* "#utility.yul":5737:5744   */
+      dup8
+        /* "#utility.yul":5728:5734   */
+      dup3
+        /* "#utility.yul":5717:5726   */
+      dup9
+        /* "#utility.yul":5713:5735   */
+      add
+        /* "#utility.yul":5695:5745   */
+      tag_152
+      jump	// in
+    tag_240:
+        /* "#utility.yul":5685:5745   */
+      swap2
+      pop
+        /* "#utility.yul":5640:5755   */
+      pop
+        /* "#utility.yul":5009:5762   */
+      swap3
+      swap6
+      swap2
+      swap5
+      pop
+      swap3
+      pop
+      jump	// out
+        /* "#utility.yul":5768:5886   */
+    tag_156:
+        /* "#utility.yul":5855:5879   */
+      tag_242
+        /* "#utility.yul":5873:5878   */
+      dup2
+        /* "#utility.yul":5855:5879   */
+      tag_138
+      jump	// in
+    tag_242:
+        /* "#utility.yul":5850:5853   */
+      dup3
+        /* "#utility.yul":5843:5880   */
+      mstore
+        /* "#utility.yul":5768:5886   */
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":5892:6114   */
+    tag_52:
+        /* "#utility.yul":5985:5989   */
+      0x00
+        /* "#utility.yul":6023:6025   */
+      0x20
+        /* "#utility.yul":6012:6021   */
+      dup3
+        /* "#utility.yul":6008:6026   */
+      add
+        /* "#utility.yul":6000:6026   */
+      swap1
+      pop
+        /* "#utility.yul":6036:6107   */
+      tag_244
+        /* "#utility.yul":6104:6105   */
+      0x00
+        /* "#utility.yul":6093:6102   */
+      dup4
+        /* "#utility.yul":6089:6106   */
+      add
+        /* "#utility.yul":6080:6086   */
+      dup5
+        /* "#utility.yul":6036:6107   */
+      tag_156
+      jump	// in
+    tag_244:
+        /* "#utility.yul":5892:6114   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":6120:6733   */
+    tag_55:
+        /* "#utility.yul":6194:6200   */
+      0x00
+        /* "#utility.yul":6202:6208   */
+      dup1
+        /* "#utility.yul":6210:6216   */
+      0x00
+        /* "#utility.yul":6259:6261   */
+      0x60
+        /* "#utility.yul":6247:6256   */
+      dup5
+        /* "#utility.yul":6238:6245   */
+      dup7
+        /* "#utility.yul":6234:6257   */
+      sub
+        /* "#utility.yul":6230:6262   */
+      slt
+        /* "#utility.yul":6227:6346   */
+      iszero
+      tag_246
+      jumpi
+        /* "#utility.yul":6265:6344   */
+      tag_247
+      tag_135
+      jump	// in
+    tag_247:
+        /* "#utility.yul":6227:6346   */
+    tag_246:
+        /* "#utility.yul":6385:6386   */
+      0x00
+        /* "#utility.yul":6410:6461   */
+      tag_248
+        /* "#utility.yul":6453:6460   */
+      dup7
+        /* "#utility.yul":6444:6450   */
+      dup3
+        /* "#utility.yul":6433:6442   */
+      dup8
+        /* "#utility.yul":6429:6451   */
+      add
+        /* "#utility.yul":6410:6461   */
+      tag_150
+      jump	// in
+    tag_248:
+        /* "#utility.yul":6400:6461   */
+      swap4
+      pop
+        /* "#utility.yul":6356:6471   */
+      pop
+        /* "#utility.yul":6510:6512   */
+      0x20
+        /* "#utility.yul":6536:6589   */
+      tag_249
+        /* "#utility.yul":6581:6588   */
+      dup7
+        /* "#utility.yul":6572:6578   */
+      dup3
+        /* "#utility.yul":6561:6570   */
+      dup8
+        /* "#utility.yul":6557:6579   */
+      add
+        /* "#utility.yul":6536:6589   */
+      tag_140
+      jump	// in
+    tag_249:
+        /* "#utility.yul":6526:6589   */
+      swap3
+      pop
+        /* "#utility.yul":6481:6599   */
+      pop
+        /* "#utility.yul":6638:6640   */
+      0x40
+        /* "#utility.yul":6664:6716   */
+      tag_250
+        /* "#utility.yul":6708:6715   */
+      dup7
+        /* "#utility.yul":6699:6705   */
+      dup3
+        /* "#utility.yul":6688:6697   */
+      dup8
+        /* "#utility.yul":6684:6706   */
+      add
+        /* "#utility.yul":6664:6716   */
+      tag_145
+      jump	// in
+    tag_250:
+        /* "#utility.yul":6654:6716   */
+      swap2
+      pop
+        /* "#utility.yul":6609:6726   */
+      pop
+        /* "#utility.yul":6120:6733   */
+      swap3
+      pop
+      swap3
+      pop
+      swap3
+      jump	// out
+        /* "#utility.yul":6739:7356   */
+    tag_60:
+        /* "#utility.yul":6815:6821   */
+      0x00
+        /* "#utility.yul":6823:6829   */
+      dup1
+        /* "#utility.yul":6831:6837   */
+      0x00
+        /* "#utility.yul":6880:6882   */
+      0x60
+        /* "#utility.yul":6868:6877   */
+      dup5
+        /* "#utility.yul":6859:6866   */
+      dup7
+        /* "#utility.yul":6855:6878   */
+      sub
+        /* "#utility.yul":6851:6883   */
+      slt
+        /* "#utility.yul":6848:6967   */
+      iszero
+      tag_252
+      jumpi
+        /* "#utility.yul":6886:6965   */
+      tag_253
+      tag_135
+      jump	// in
+    tag_253:
+        /* "#utility.yul":6848:6967   */
+    tag_252:
+        /* "#utility.yul":7006:7007   */
+      0x00
+        /* "#utility.yul":7031:7084   */
+      tag_254
+        /* "#utility.yul":7076:7083   */
+      dup7
+        /* "#utility.yul":7067:7073   */
+      dup3
+        /* "#utility.yul":7056:7065   */
+      dup8
+        /* "#utility.yul":7052:7074   */
+      add
+        /* "#utility.yul":7031:7084   */
+      tag_140
+      jump	// in
+    tag_254:
+        /* "#utility.yul":7021:7084   */
+      swap4
+      pop
+        /* "#utility.yul":6977:7094   */
+      pop
+        /* "#utility.yul":7133:7135   */
+      0x20
+        /* "#utility.yul":7159:7212   */
+      tag_255
+        /* "#utility.yul":7204:7211   */
+      dup7
+        /* "#utility.yul":7195:7201   */
+      dup3
+        /* "#utility.yul":7184:7193   */
+      dup8
+        /* "#utility.yul":7180:7202   */
+      add
+        /* "#utility.yul":7159:7212   */
+      tag_140
+      jump	// in
+    tag_255:
+        /* "#utility.yul":7149:7212   */
+      swap3
+      pop
+        /* "#utility.yul":7104:7222   */
+      pop
+        /* "#utility.yul":7261:7263   */
+      0x40
+        /* "#utility.yul":7287:7339   */
+      tag_256
+        /* "#utility.yul":7331:7338   */
+      dup7
+        /* "#utility.yul":7322:7328   */
+      dup3
+        /* "#utility.yul":7311:7320   */
+      dup8
+        /* "#utility.yul":7307:7329   */
+      add
+        /* "#utility.yul":7287:7339   */
+      tag_145
+      jump	// in
+    tag_256:
+        /* "#utility.yul":7277:7339   */
+      swap2
+      pop
+        /* "#utility.yul":7232:7349   */
+      pop
+        /* "#utility.yul":6739:7356   */
+      swap3
+      pop
+      swap3
+      pop
+      swap3
+      jump	// out
+        /* "#utility.yul":7362:7422   */
+    tag_157:
+        /* "#utility.yul":7390:7393   */
+      0x00
+        /* "#utility.yul":7411:7416   */
+      dup2
+        /* "#utility.yul":7404:7416   */
+      swap1
+      pop
+        /* "#utility.yul":7362:7422   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":7428:7570   */
+    tag_158:
+        /* "#utility.yul":7478:7487   */
+      0x00
+        /* "#utility.yul":7511:7564   */
+      tag_259
+        /* "#utility.yul":7529:7563   */
+      tag_260
+        /* "#utility.yul":7538:7562   */
+      tag_261
+        /* "#utility.yul":7556:7561   */
+      dup5
+        /* "#utility.yul":7538:7562   */
+      tag_137
+      jump	// in
+    tag_261:
+        /* "#utility.yul":7529:7563   */
+      tag_157
+      jump	// in
+    tag_260:
+        /* "#utility.yul":7511:7564   */
+      tag_137
+      jump	// in
+    tag_259:
+        /* "#utility.yul":7498:7564   */
+      swap1
+      pop
+        /* "#utility.yul":7428:7570   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":7576:7702   */
+    tag_159:
+        /* "#utility.yul":7626:7635   */
+      0x00
+        /* "#utility.yul":7659:7696   */
+      tag_263
+        /* "#utility.yul":7690:7695   */
+      dup3
+        /* "#utility.yul":7659:7696   */
+      tag_158
+      jump	// in
+    tag_263:
+        /* "#utility.yul":7646:7696   */
+      swap1
+      pop
+        /* "#utility.yul":7576:7702   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":7708:7852   */
+    tag_160:
+        /* "#utility.yul":7776:7785   */
+      0x00
+        /* "#utility.yul":7809:7846   */
+      tag_265
+        /* "#utility.yul":7840:7845   */
+      dup3
+        /* "#utility.yul":7809:7846   */
+      tag_159
+      jump	// in
+    tag_265:
+        /* "#utility.yul":7796:7846   */
+      swap1
+      pop
+        /* "#utility.yul":7708:7852   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":7858:8025   */
+    tag_161:
+        /* "#utility.yul":7963:8018   */
+      tag_267
+        /* "#utility.yul":8012:8017   */
+      dup2
+        /* "#utility.yul":7963:8018   */
+      tag_160
+      jump	// in
+    tag_267:
+        /* "#utility.yul":7958:7961   */
+      dup3
+        /* "#utility.yul":7951:8019   */
+      mstore
+        /* "#utility.yul":7858:8025   */
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":8031:8289   */
+    tag_66:
+        /* "#utility.yul":8142:8146   */
+      0x00
+        /* "#utility.yul":8180:8182   */
+      0x20
+        /* "#utility.yul":8169:8178   */
+      dup3
+        /* "#utility.yul":8165:8183   */
+      add
+        /* "#utility.yul":8157:8183   */
+      swap1
+      pop
+        /* "#utility.yul":8193:8282   */
+      tag_269
+        /* "#utility.yul":8279:8280   */
+      0x00
+        /* "#utility.yul":8268:8277   */
+      dup4
+        /* "#utility.yul":8264:8281   */
+      add
+        /* "#utility.yul":8255:8261   */
+      dup5
+        /* "#utility.yul":8193:8282   */
+      tag_161
+      jump	// in
+    tag_269:
+        /* "#utility.yul":8031:8289   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":8295:8906   */
+    tag_69:
+        /* "#utility.yul":8368:8374   */
+      0x00
+        /* "#utility.yul":8376:8382   */
+      dup1
+        /* "#utility.yul":8384:8390   */
+      0x00
+        /* "#utility.yul":8433:8435   */
+      0x60
+        /* "#utility.yul":8421:8430   */
+      dup5
+        /* "#utility.yul":8412:8419   */
+      dup7
+        /* "#utility.yul":8408:8431   */
+      sub
+        /* "#utility.yul":8404:8436   */
+      slt
+        /* "#utility.yul":8401:8520   */
+      iszero
+      tag_271
+      jumpi
+        /* "#utility.yul":8439:8518   */
+      tag_272
+      tag_135
+      jump	// in
+    tag_272:
+        /* "#utility.yul":8401:8520   */
+    tag_271:
+        /* "#utility.yul":8559:8560   */
+      0x00
+        /* "#utility.yul":8584:8637   */
+      tag_273
+        /* "#utility.yul":8629:8636   */
+      dup7
+        /* "#utility.yul":8620:8626   */
+      dup3
+        /* "#utility.yul":8609:8618   */
+      dup8
+        /* "#utility.yul":8605:8627   */
+      add
+        /* "#utility.yul":8584:8637   */
+      tag_140
+      jump	// in
+    tag_273:
+        /* "#utility.yul":8574:8637   */
+      swap4
+      pop
+        /* "#utility.yul":8530:8647   */
+      pop
+        /* "#utility.yul":8686:8688   */
+      0x20
+        /* "#utility.yul":8712:8764   */
+      tag_274
+        /* "#utility.yul":8756:8763   */
+      dup7
+        /* "#utility.yul":8747:8753   */
+      dup3
+        /* "#utility.yul":8736:8745   */
+      dup8
+        /* "#utility.yul":8732:8754   */
+      add
+        /* "#utility.yul":8712:8764   */
+      tag_145
+      jump	// in
+    tag_274:
+        /* "#utility.yul":8702:8764   */
+      swap3
+      pop
+        /* "#utility.yul":8657:8774   */
+      pop
+        /* "#utility.yul":8813:8815   */
+      0x40
+        /* "#utility.yul":8839:8889   */
+      tag_275
+        /* "#utility.yul":8881:8888   */
+      dup7
+        /* "#utility.yul":8872:8878   */
+      dup3
+        /* "#utility.yul":8861:8870   */
+      dup8
+        /* "#utility.yul":8857:8879   */
+      add
+        /* "#utility.yul":8839:8889   */
+      tag_152
+      jump	// in
+    tag_275:
+        /* "#utility.yul":8829:8889   */
+      swap2
+      pop
+        /* "#utility.yul":8784:8899   */
+      pop
+        /* "#utility.yul":8295:8906   */
+      swap3
+      pop
+      swap3
+      pop
+      swap3
+      jump	// out
+        /* "#utility.yul":8912:9382   */
+    tag_73:
+        /* "#utility.yul":8978:8984   */
+      0x00
+        /* "#utility.yul":8986:8992   */
+      dup1
+        /* "#utility.yul":9035:9037   */
+      0x40
+        /* "#utility.yul":9023:9032   */
+      dup4
+        /* "#utility.yul":9014:9021   */
+      dup6
+        /* "#utility.yul":9010:9033   */
+      sub
+        /* "#utility.yul":9006:9038   */
+      slt
+        /* "#utility.yul":9003:9122   */
+      iszero
+      tag_277
+      jumpi
+        /* "#utility.yul":9041:9120   */
+      tag_278
+      tag_135
+      jump	// in
+    tag_278:
+        /* "#utility.yul":9003:9122   */
+    tag_277:
+        /* "#utility.yul":9161:9162   */
+      0x00
+        /* "#utility.yul":9186:9239   */
+      tag_279
+        /* "#utility.yul":9231:9238   */
+      dup6
+        /* "#utility.yul":9222:9228   */
+      dup3
+        /* "#utility.yul":9211:9220   */
+      dup7
+        /* "#utility.yul":9207:9229   */
+      add
+        /* "#utility.yul":9186:9239   */
+      tag_140
+      jump	// in
+    tag_279:
+        /* "#utility.yul":9176:9239   */
+      swap3
+      pop
+        /* "#utility.yul":9132:9249   */
+      pop
+        /* "#utility.yul":9288:9290   */
+      0x20
+        /* "#utility.yul":9314:9365   */
+      tag_280
+        /* "#utility.yul":9357:9364   */
+      dup6
+        /* "#utility.yul":9348:9354   */
+      dup3
+        /* "#utility.yul":9337:9346   */
+      dup7
+        /* "#utility.yul":9333:9355   */
+      add
+        /* "#utility.yul":9314:9365   */
+      tag_150
+      jump	// in
+    tag_280:
+        /* "#utility.yul":9304:9365   */
+      swap2
+      pop
+        /* "#utility.yul":9259:9375   */
+      pop
+        /* "#utility.yul":8912:9382   */
+      swap3
+      pop
+      swap3
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":9388:9557   */
+    tag_162:
+        /* "#utility.yul":9472:9483   */
+      0x00
+        /* "#utility.yul":9506:9512   */
+      dup3
+        /* "#utility.yul":9501:9504   */
+      dup3
+        /* "#utility.yul":9494:9513   */
+      mstore
+        /* "#utility.yul":9546:9550   */
+      0x20
+        /* "#utility.yul":9541:9544   */
+      dup3
+        /* "#utility.yul":9537:9551   */
+      add
+        /* "#utility.yul":9522:9551   */
+      swap1
+      pop
+        /* "#utility.yul":9388:9557   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":9563:9725   */
+    tag_163:
+        /* "#utility.yul":9703:9717   */
+      0x554e415554484f52495a45440000000000000000000000000000000000000000
+        /* "#utility.yul":9699:9700   */
+      0x00
+        /* "#utility.yul":9691:9697   */
+      dup3
+        /* "#utility.yul":9687:9701   */
+      add
+        /* "#utility.yul":9680:9718   */
+      mstore
+        /* "#utility.yul":9563:9725   */
+      pop
+      jump	// out
+        /* "#utility.yul":9731:10097   */
+    tag_164:
+        /* "#utility.yul":9873:9876   */
+      0x00
+        /* "#utility.yul":9894:9961   */
+      tag_284
+        /* "#utility.yul":9958:9960   */
+      0x0c
+        /* "#utility.yul":9953:9956   */
+      dup4
+        /* "#utility.yul":9894:9961   */
+      tag_162
+      jump	// in
+    tag_284:
+        /* "#utility.yul":9887:9961   */
+      swap2
+      pop
+        /* "#utility.yul":9970:10063   */
+      tag_285
+        /* "#utility.yul":10059:10062   */
+      dup3
+        /* "#utility.yul":9970:10063   */
+      tag_163
+      jump	// in
+    tag_285:
+        /* "#utility.yul":10088:10090   */
+      0x20
+        /* "#utility.yul":10083:10086   */
+      dup3
+        /* "#utility.yul":10079:10091   */
+      add
+        /* "#utility.yul":10072:10091   */
+      swap1
+      pop
+        /* "#utility.yul":9731:10097   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":10103:10522   */
+    tag_83:
+        /* "#utility.yul":10269:10273   */
+      0x00
+        /* "#utility.yul":10307:10309   */
+      0x20
+        /* "#utility.yul":10296:10305   */
+      dup3
+        /* "#utility.yul":10292:10310   */
+      add
+        /* "#utility.yul":10284:10310   */
+      swap1
+      pop
+        /* "#utility.yul":10356:10365   */
+      dup2
+        /* "#utility.yul":10350:10354   */
+      dup2
+        /* "#utility.yul":10346:10366   */
+      sub
+        /* "#utility.yul":10342:10343   */
+      0x00
+        /* "#utility.yul":10331:10340   */
+      dup4
+        /* "#utility.yul":10327:10344   */
+      add
+        /* "#utility.yul":10320:10367   */
+      mstore
+        /* "#utility.yul":10384:10515   */
+      tag_287
+        /* "#utility.yul":10510:10514   */
+      dup2
+        /* "#utility.yul":10384:10515   */
+      tag_164
+      jump	// in
+    tag_287:
+        /* "#utility.yul":10376:10515   */
+      swap1
+      pop
+        /* "#utility.yul":10103:10522   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":10528:10643   */
+    tag_165:
+        /* "#utility.yul":10613:10636   */
+      tag_289
+        /* "#utility.yul":10630:10635   */
+      dup2
+        /* "#utility.yul":10613:10636   */
+      tag_143
+      jump	// in
+    tag_289:
+        /* "#utility.yul":10608:10611   */
+      dup3
+        /* "#utility.yul":10601:10637   */
+      mstore
+        /* "#utility.yul":10528:10643   */
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":10649:11087   */
+    tag_96:
+        /* "#utility.yul":10796:10800   */
+      0x00
+        /* "#utility.yul":10834:10836   */
+      0x60
+        /* "#utility.yul":10823:10832   */
+      dup3
+        /* "#utility.yul":10819:10837   */
+      add
+        /* "#utility.yul":10811:10837   */
+      swap1
+      pop
+        /* "#utility.yul":10847:10918   */
+      tag_291
+        /* "#utility.yul":10915:10916   */
+      0x00
+        /* "#utility.yul":10904:10913   */
+      dup4
+        /* "#utility.yul":10900:10917   */
+      add
+        /* "#utility.yul":10891:10897   */
+      dup7
+        /* "#utility.yul":10847:10918   */
+      tag_156
+      jump	// in
+    tag_291:
+        /* "#utility.yul":10928:11000   */
+      tag_292
+        /* "#utility.yul":10996:10998   */
+      0x20
+        /* "#utility.yul":10985:10994   */
+      dup4
+        /* "#utility.yul":10981:10999   */
+      add
+        /* "#utility.yul":10972:10978   */
+      dup6
+        /* "#utility.yul":10928:11000   */
+      tag_156
+      jump	// in
+    tag_292:
+        /* "#utility.yul":11010:11080   */
+      tag_293
+        /* "#utility.yul":11076:11078   */
+      0x40
+        /* "#utility.yul":11065:11074   */
+      dup4
+        /* "#utility.yul":11061:11079   */
+      add
+        /* "#utility.yul":11052:11058   */
+      dup5
+        /* "#utility.yul":11010:11080   */
+      tag_165
+      jump	// in
+    tag_293:
+        /* "#utility.yul":10649:11087   */
+      swap5
+      swap4
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":11093:11230   */
+    tag_166:
+        /* "#utility.yul":11147:11152   */
+      0x00
+        /* "#utility.yul":11178:11184   */
+      dup2
+        /* "#utility.yul":11172:11185   */
+      mload
+        /* "#utility.yul":11163:11185   */
+      swap1
+      pop
+        /* "#utility.yul":11194:11224   */
+      tag_295
+        /* "#utility.yul":11218:11223   */
+      dup2
+        /* "#utility.yul":11194:11224   */
+      tag_151
+      jump	// in
+    tag_295:
+        /* "#utility.yul":11093:11230   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":11236:11581   */
+    tag_100:
+        /* "#utility.yul":11303:11309   */
+      0x00
+        /* "#utility.yul":11352:11354   */
+      0x20
+        /* "#utility.yul":11340:11349   */
+      dup3
+        /* "#utility.yul":11331:11338   */
+      dup5
+        /* "#utility.yul":11327:11350   */
+      sub
+        /* "#utility.yul":11323:11355   */
+      slt
+        /* "#utility.yul":11320:11439   */
+      iszero
+      tag_297
+      jumpi
+        /* "#utility.yul":11358:11437   */
+      tag_298
+      tag_135
+      jump	// in
+    tag_298:
+        /* "#utility.yul":11320:11439   */
+    tag_297:
+        /* "#utility.yul":11478:11479   */
+      0x00
+        /* "#utility.yul":11503:11564   */
+      tag_299
+        /* "#utility.yul":11556:11563   */
+      dup5
+        /* "#utility.yul":11547:11553   */
+      dup3
+        /* "#utility.yul":11536:11545   */
+      dup6
+        /* "#utility.yul":11532:11554   */
+      add
+        /* "#utility.yul":11503:11564   */
+      tag_166
+      jump	// in
+    tag_299:
+        /* "#utility.yul":11493:11564   */
+      swap2
+      pop
+        /* "#utility.yul":11449:11574   */
+      pop
+        /* "#utility.yul":11236:11581   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":11587:11817   */
+    tag_167:
+        /* "#utility.yul":11727:11761   */
+      0x496e697469616c697a61626c653a20636f6e7472616374206973206e6f742069
+        /* "#utility.yul":11723:11724   */
+      0x00
+        /* "#utility.yul":11715:11721   */
+      dup3
+        /* "#utility.yul":11711:11725   */
+      add
+        /* "#utility.yul":11704:11762   */
+      mstore
+        /* "#utility.yul":11796:11809   */
+      0x6e697469616c697a696e67000000000000000000000000000000000000000000
+        /* "#utility.yul":11791:11793   */
+      0x20
+        /* "#utility.yul":11783:11789   */
+      dup3
+        /* "#utility.yul":11779:11794   */
+      add
+        /* "#utility.yul":11772:11810   */
+      mstore
+        /* "#utility.yul":11587:11817   */
+      pop
+      jump	// out
+        /* "#utility.yul":11823:12189   */
+    tag_168:
+        /* "#utility.yul":11965:11968   */
+      0x00
+        /* "#utility.yul":11986:12053   */
+      tag_302
+        /* "#utility.yul":12050:12052   */
+      0x2b
+        /* "#utility.yul":12045:12048   */
+      dup4
+        /* "#utility.yul":11986:12053   */
+      tag_162
+      jump	// in
+    tag_302:
+        /* "#utility.yul":11979:12053   */
+      swap2
+      pop
+        /* "#utility.yul":12062:12155   */
+      tag_303
+        /* "#utility.yul":12151:12154   */
+      dup3
+        /* "#utility.yul":12062:12155   */
+      tag_167
+      jump	// in
+    tag_303:
+        /* "#utility.yul":12180:12182   */
+      0x40
+        /* "#utility.yul":12175:12178   */
+      dup3
+        /* "#utility.yul":12171:12183   */
+      add
+        /* "#utility.yul":12164:12183   */
+      swap1
+      pop
+        /* "#utility.yul":11823:12189   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":12195:12614   */
+    tag_125:
+        /* "#utility.yul":12361:12365   */
+      0x00
+        /* "#utility.yul":12399:12401   */
+      0x20
+        /* "#utility.yul":12388:12397   */
+      dup3
+        /* "#utility.yul":12384:12402   */
+      add
+        /* "#utility.yul":12376:12402   */
+      swap1
+      pop
+        /* "#utility.yul":12448:12457   */
+      dup2
+        /* "#utility.yul":12442:12446   */
+      dup2
+        /* "#utility.yul":12438:12458   */
+      sub
+        /* "#utility.yul":12434:12435   */
+      0x00
+        /* "#utility.yul":12423:12432   */
+      dup4
+        /* "#utility.yul":12419:12436   */
+      add
+        /* "#utility.yul":12412:12459   */
+      mstore
+        /* "#utility.yul":12476:12607   */
+      tag_305
+        /* "#utility.yul":12602:12606   */
+      dup2
+        /* "#utility.yul":12476:12607   */
+      tag_168
+      jump	// in
+    tag_305:
+        /* "#utility.yul":12468:12607   */
+      swap1
+      pop
+        /* "#utility.yul":12195:12614   */
+      swap2
+      swap1
+      pop
+      jump	// out
+
+    auxdata: 0xa26469706673582212200c754345584827c09d2fd47a2d040e46002e9963875a0b78cf45a70b16a1e33064736f6c634300080e0033
+}
