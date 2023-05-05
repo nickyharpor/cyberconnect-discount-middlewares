@@ -11,8 +11,6 @@ is used as the base for writing these new middlewares.
 
 ### [CollectEarlyBirdMw.sol](CollectEarlyBirdMw.sol)
 
----
-
 Discount applies for the early bird collectors. A target
 block in future is set as the end of early bird discount.
 
@@ -30,9 +28,9 @@ which the discount is disabled.
 than or equal to `Constants._MAX_BPS`. Zero means no
 discount.
 
-### [CollectFirstNMw.sol](CollectFirstNMw.sol)
-
 ---
+
+### [CollectFirstNMw.sol](CollectFirstNMw.sol)
 
 A discount is applied for the first N collectors
 of the essence.
@@ -52,9 +50,9 @@ receive a discount.
 than or equal to `Constants._MAX_BPS`. Zero means no
 discount.
 
-### [CollectHotEssenceMw.sol](CollectHotEssenceMw.sol)
-
 ---
+
+### [CollectHotEssenceMw.sol](CollectHotEssenceMw.sol)
 
 Discount applies on the essence when it's not in trend
 any more (i.e. after a target block has passed.)
@@ -73,9 +71,9 @@ discount starts to apply.
 than or equal to `Constants._MAX_BPS`. Zero means no
 discount.
 
-### [CollectUpgradeMw.sol](CollectUpgradeMw.sol)
-
 ---
+
+### [CollectUpgradeMw.sol](CollectUpgradeMw.sol)
 
 Discount applies on the essence only if the collector has
 already collected a specified essence (e.g. an essence
@@ -95,6 +93,8 @@ a discount.
 `uint256 upgradeDiscount` sets discount percentage. Must be less
 than or equal to `Constants._MAX_BPS`. Zero means no
 discount.
+
+---
 
 ## Usage:
 To compile and deploy the contracts you can clone the
