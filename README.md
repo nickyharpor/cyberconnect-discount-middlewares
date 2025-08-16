@@ -2,8 +2,8 @@
 
 This repository contains a collection of
 [Cyberconnect](https://cyberconnect.me/)
-middlewares to apply a discount on an essence in different
-ways.
+middlewares to apply a discount on an essence in several
+different ways.
 [CollectPaidMw.sol](https://github.com/cyberconnecthq/cybercontracts/blob/main/src/middlewares/essence/CollectPaidMw.sol)
 is used as the base for writing these new middlewares.
 
